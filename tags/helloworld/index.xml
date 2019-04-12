@@ -1,25 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>7.</title>
-    <link>http://nanamisawa.github.io/</link>
-    <description>Recent content on 7.</description>
+    <title>helloworld on 7.</title>
+    <link>http://nanamisawa.github.io/tags/helloworld/</link>
+    <description>Recent content in helloworld on 7.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Thu, 11 Apr 2019 23:39:47 +0900</lastBuildDate>
     
-	<atom:link href="http://nanamisawa.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://nanamisawa.github.io/tags/helloworld/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>About</title>
-      <link>http://nanamisawa.github.io/portfolio/</link>
-      <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://nanamisawa.github.io/portfolio/</guid>
-      <description>Hugo is a static site engine written in Go.
-It makes use of a variety of open source projects including:</description>
-    </item>
     
     <item>
       <title>First post</title>
@@ -35,15 +25,6 @@ It makes use of a variety of open source projects including:</description>
  はてなとかでは投稿しにくい私的な話・研究関連の話も含めたい
  GitHubpages+Hugoで運営するので、バージョン管理＆バックアップできる(Markdownで書いてるしなんとかなる) ほんとは自宅のラズパイをwebサーバにしてブログ公開ということも考えたが、諦めた（詳細はまた記事にする予定）  て感じです。
 連絡先 misawa.nana7(a)gmail.com までお願いします。</description>
-    </item>
-    
-    <item>
-      <title>Test</title>
-      <link>http://nanamisawa.github.io/post/test/</link>
-      <pubDate>Wed, 10 Apr 2019 15:32:47 +0900</pubDate>
-      
-      <guid>http://nanamisawa.github.io/post/test/</guid>
-      <description>Test $$e^{i\pi} = -1$$</description>
     </item>
     
   </channel>
