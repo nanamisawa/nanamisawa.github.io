@@ -34,7 +34,7 @@
       
       <guid>http://nanamisawa.github.io/post/test/</guid>
       <description> Test $$e^{i\pi} = -1$$
-echo &amp;quot;Hello&amp;quot;  </description>
+echo &amp;#34;Hello&amp;#34;</description>
     </item>
     
   </channel>
