@@ -13,12 +13,25 @@
     
     <item>
       <title>About</title>
-      <link>http://nanamisawa.github.io/portfolio/</link>
+      <link>http://nanamisawa.github.io/about/</link>
       <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://nanamisawa.github.io/portfolio/</guid>
-      <description>Hugo is a static site engine written in Go.
-It makes use of a variety of open source projects including:</description>
+      <guid>http://nanamisawa.github.io/about/</guid>
+      <description>Thank you for visiting my site.
+I&amp;rsquo;m Nana Misawa, a Ph.D candidate at Nagoya University, Japan.
+This blog covers a wide range of topics.
+Mainly it&amp;rsquo;s written in Japanese, but sometimes in English.
+ご覧頂きありがとう御座います。 以下、自己紹介ないし自己アピール（就職活動に向けて）となります。
+自己紹介 三澤奈々です。博士課程二年で、就職活動を始めました。
+経歴
+1993年　名古屋市　生まれ 2012年　愛知淑徳高等学校　卒業
+2012年　東京大学　入学
+2016年　同大学　卒業（工学部、学士）
+2016年　東京大学大学院　入学
+2018年　同大学院　卒業（工学系研究科、修士）
+2018年~ 名古屋大学大学院　在学中（情報学研究科、博士課程）
+日本学術振興会特別研究員（DC1）
+趣味 - クラシックバレエ（週一回） - 映画鑑賞（月2~3本程度） - スキューバダイビング（暫く行ってない） - ネットサーフィン（毎日活動中！）</description>
     </item>
     
     <item>
@@ -30,7 +43,7 @@ It makes use of a variety of open source projects including:</description>
       <description>このブログについて 筆者 ななみさわと申します。
 目的  仕入れた知識の整理 読んだ本・観た映画などの感想 将来設計模索のための思考整理 旅の記録  他のブログサイトとの使い分け  Qiita：技術関連記事 はてな：フィードバックがほしい記事 当ブログ：ただ残しておきたいだけの記事  作った経緯  最近になってアウトプットの重要性に気付いた（遅い）
  はてなとかでは投稿しにくい私的な話・研究関連の話も含めたい
- GitHubpages+Hugoで運営するので、バージョン管理＆バックアップできる(Markdownで書いてるしなんとかなる) ほんとは自宅のラズパイをwebサーバにしてブログ公開ということも考えたが、諦めた（詳細はまた記事にする予定）  て感じです。
+ GitHubpages+Hugoで運営するので、バージョン管理＆バックアップできる（Markdownなので他のブログにも移植できるはず） ほんとは自宅のラズパイをwebサーバにしてブログ公開ということも考えたが、諦めた（詳細はまた記事にする予定）  て感じです。
 連絡先 misawa.nana7(a)gmail.com までお願いします。</description>
     </item>
     
