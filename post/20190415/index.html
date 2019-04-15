@@ -219,33 +219,21 @@
 <li>NFSで同様にファイルサーバがマウントされている計算機間でのsshログイン</li>
 <li>sshログイン後も元いたディレクトリのままになるようなコマンドを.bashrcで設定したい（通常はsshすると下のようにhomeディレクトリに移動する　いちいち元の場所にcdするのは面倒）<br /></li>
 </ul>
-
-<pre><code>[misawa@host1 test]$ ssh host2
-[misawa@host2 ~]$
-</code></pre>
-
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">[</span>misawa@host1 test<span class="o">]</span>$ ssh host2
+<span class="o">[</span>misawa@host2 ~<span class="o">]</span>$</code></pre></div>
 <h1 id="失敗例">失敗例</h1>
-
-<pre><code>function sshcd(){
-		    current=`pwd`
-			    ssh $1 &quot;cd $current&quot;
-}
-</code></pre>
-
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">function</span> sshcd<span class="o">(){</span>
+		    <span class="nv">current</span><span class="o">=</span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>
+			    ssh <span class="nv">$1</span> <span class="s2">&#34;cd </span><span class="nv">$current</span><span class="s2">&#34;</span>
+<span class="o">}</span></code></pre></div>
 <p>これだとcdを実行したあと閉じるので元に戻ってしまう（ターミナルの見た目上は変化がない）</p>
-
-<pre><code>[misawa@host1 test]$ sshcd host2
-[misawa@host1 test]$
-</code></pre>
-
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">[</span>misawa@host1 test<span class="o">]</span>$ sshcd host2
+<span class="o">[</span>misawa@host1 test<span class="o">]</span>$</code></pre></div>
 <h1 id="成功例">成功例</h1>
-
-<pre><code>function sshcd(){
-		    current=`pwd`
-			    ssh -t $1 &quot;cd $current &amp;&amp; /bin/bash&quot;
-}
-</code></pre>
-
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">function</span> sshcd<span class="o">(){</span>
+		    <span class="nv">current</span><span class="o">=</span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>
+			    ssh -t <span class="nv">$1</span> <span class="s2">&#34;cd </span><span class="nv">$current</span><span class="s2"> &amp;&amp; /bin/bash&#34;</span>
+<span class="o">}</span></code></pre></div>
 <p>こうすることでうまくいきました。</p>
 
 <pre><code>[misawa@host1 test]$ sshcd host2
