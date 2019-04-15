@@ -224,7 +224,7 @@
 <h1 id="失敗例">失敗例</h1>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">function</span> sshcd<span class="o">(){</span>
 		    <span class="nv">current</span><span class="o">=</span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>
-			    ssh <span class="nv">$1</span> <span class="s2">&#34;cd </span><span class="nv">$current</span><span class="s2">&#34;</span>
+			  ssh <span class="nv">$1</span> <span class="s2">&#34;cd </span><span class="nv">$current</span><span class="s2">&#34;</span>
 <span class="o">}</span></code></pre></div>
 <p>これだとcdを実行したあと閉じるので元に戻ってしまう（ターミナルの見た目上は変化がない）</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">[</span>misawa@host1 test<span class="o">]</span>$ sshcd host2
@@ -232,7 +232,7 @@
 <h1 id="成功例">成功例</h1>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">function</span> sshcd<span class="o">(){</span>
 		    <span class="nv">current</span><span class="o">=</span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>
-			    ssh -t <span class="nv">$1</span> <span class="s2">&#34;cd </span><span class="nv">$current</span><span class="s2"> &amp;&amp; /bin/bash&#34;</span>
+			  ssh -t <span class="nv">$1</span> <span class="s2">&#34;cd </span><span class="nv">$current</span><span class="s2"> &amp;&amp; /bin/bash&#34;</span>
 <span class="o">}</span></code></pre></div>
 <p>こうすることでうまくいきました。</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">[</span>misawa@host1 test<span class="o">]</span>$ sshcd host2
