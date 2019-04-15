@@ -213,15 +213,18 @@
 
 <p>The remaining content of your post.</p>
 
-<p>#前提
-- NFSで同様にファイルサーバがマウントされている計算機間でのsshログイン
-- sshログイン後も元いたディレクトリのままになるようなコマンドを.bashrcで設定したい（通常はsshすると下のようにhomeディレクトリに移動する　いちいち元の場所にcdするのは面倒）</p>
+<h1 id="前提">前提</h1>
+
+<ul>
+<li>NFSで同様にファイルサーバがマウントされている計算機間でのsshログイン</li>
+<li>sshログイン後も元いたディレクトリのままになるようなコマンドを.bashrcで設定したい（通常はsshすると下のようにhomeディレクトリに移動する　いちいち元の場所にcdするのは面倒）<br /></li>
+</ul>
 
 <pre><code>[misawa@host1 test]$ ssh host2
-[misawa@host2 ~]$ 
+[misawa@host2 ~]$
 </code></pre>
 
-<p>#失敗例</p>
+<h1 id="失敗例">失敗例</h1>
 
 <pre><code>function sshcd(){
 		    current=`pwd`
@@ -232,10 +235,10 @@
 <p>これだとcdを実行したあと閉じるので元に戻ってしまう（ターミナルの見た目上は変化がない）</p>
 
 <pre><code>[misawa@host1 test]$ sshcd host2
-[misawa@host1 test]$ 
+[misawa@host1 test]$
 </code></pre>
 
-<p>#成功例</p>
+<h1 id="成功例">成功例</h1>
 
 <pre><code>function sshcd(){
 		    current=`pwd`
@@ -246,7 +249,7 @@
 <p>こうすることでうまくいきました。</p>
 
 <pre><code>[misawa@host1 test]$ sshcd host2
-[misawa@host2 test]$ 
+[misawa@host2 test]$
 </code></pre>
 
 <p>作業時間がほんのちょっと短縮できます。</p>
