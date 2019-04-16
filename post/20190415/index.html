@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
 
   
-  <title>20190415</title>
+  <title>カレントディレクトリのままsshしたいときのための.bashrc設定</title>
 
   
   
@@ -24,26 +24,38 @@
 
   
   
-  <meta name="description" content="Cut out summary from your post content here.
-">
+  <meta name="description" content="※Qiitaと同じ内容です
+前提  NFSで同様にファイルサーバがマウントされている計算機間でのsshログイン sshログイン後も元いたディレクトリのままになるようなコマンドを.bashrcで設定したい（通常はsshすると下のようにhomeディレクトリに移動する　いちいち元の場所にcdするのは面倒）
+  [misawa@host1 test]$ ssh host2 [misawa@host2 ~]$ 失敗例 function sshcd(){ current=`pwd` ssh $1 &amp;#34;cd $current&amp;#34; } これだとcdを実行したあと閉じるので元に戻ってしまう（ターミナルの見た目上は変化がない）
+[misawa@host1 test]$ sshcd host2 [misawa@host1 test]$ 成功例 function sshcd(){ current=`pwd` ssh -t $1 &amp;#34;cd $current&amp;amp;&amp;amp; /bin/bash&amp;#34; } こうすることでうまくいきました。
+[misawa@host1 test]$ sshcd host2 [misawa@host2 test]$ 作業時間がほんのちょっと短縮できます。
+※とても参考にさせて頂きました https://qiita.com/kanemu/items/679c4e14aee15441e33f">
 
   
   
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@mswn7">
-    <meta name="twitter:title" content="20190415">
-    <meta name="twitter:description" content="Cut out summary from your post content here.
-">
-    <meta name="twitter:image" content="http://nanamisawa.github.io/images/cover.jpg">
+    <meta name="twitter:title" content="カレントディレクトリのままsshしたいときのための.bashrc設定">
+    <meta name="twitter:description" content="※Qiitaと同じ内容です
+前提  NFSで同様にファイルサーバがマウントされている計算機間でのsshログイン sshログイン後も元いたディレクトリのままになるようなコマンドを.bashrcで設定したい（通常はsshすると下のようにhomeディレクトリに移動する　いちいち元の場所にcdするのは面倒）
+  [misawa@host1 test]$ ssh host2 [misawa@host2 ~]$ 失敗例 function sshcd(){ current=`pwd` ssh $1 &amp;#34;cd $current&amp;#34; } これだとcdを実行したあと閉じるので元に戻ってしまう（ターミナルの見た目上は変化がない）
+[misawa@host1 test]$ sshcd host2 [misawa@host1 test]$ 成功例 function sshcd(){ current=`pwd` ssh -t $1 &amp;#34;cd $current&amp;amp;&amp;amp; /bin/bash&amp;#34; } こうすることでうまくいきました。
+[misawa@host1 test]$ sshcd host2 [misawa@host2 test]$ 作業時間がほんのちょっと短縮できます。
+※とても参考にさせて頂きました https://qiita.com/kanemu/items/679c4e14aee15441e33f">
+    <meta name="twitter:image" content="http://nanamisawa.github.io/">
   
 
   
   <meta property="og:type" content="article">
-  <meta property="og:title" content="20190415">
-  <meta property="og:description" content="Cut out summary from your post content here.
-">
+  <meta property="og:title" content="カレントディレクトリのままsshしたいときのための.bashrc設定">
+  <meta property="og:description" content="※Qiitaと同じ内容です
+前提  NFSで同様にファイルサーバがマウントされている計算機間でのsshログイン sshログイン後も元いたディレクトリのままになるようなコマンドを.bashrcで設定したい（通常はsshすると下のようにhomeディレクトリに移動する　いちいち元の場所にcdするのは面倒）
+  [misawa@host1 test]$ ssh host2 [misawa@host2 ~]$ 失敗例 function sshcd(){ current=`pwd` ssh $1 &amp;#34;cd $current&amp;#34; } これだとcdを実行したあと閉じるので元に戻ってしまう（ターミナルの見た目上は変化がない）
+[misawa@host1 test]$ sshcd host2 [misawa@host1 test]$ 成功例 function sshcd(){ current=`pwd` ssh -t $1 &amp;#34;cd $current&amp;amp;&amp;amp; /bin/bash&amp;#34; } こうすることでうまくいきました。
+[misawa@host1 test]$ sshcd host2 [misawa@host2 test]$ 作業時間がほんのちょっと短縮できます。
+※とても参考にさせて頂きました https://qiita.com/kanemu/items/679c4e14aee15441e33f">
   <meta property="og:url" content="http://nanamisawa.github.io/post/20190415/">
-  <meta property="og:image" content="http://nanamisawa.github.io/images/cover.jpg">
+  <meta property="og:image" content="http://nanamisawa.github.io/">
 
 
 
@@ -206,12 +218,12 @@
 
   <section class="main post-detail">
     <header class="post-header">
-      <h1 class="post-title">20190415</h1>
+      <h1 class="post-title">カレントディレクトリのままsshしたいときのための.bashrc設定</h1>
       <p class="post-meta">@Nana Misawa · Apr 15, 2019 · 1 min read</p>
     </header>
-    <article class="post-content"><p>Cut out summary from your post content here.</p>
+    <article class="post-content">
 
-<p>The remaining content of your post.</p>
+<p>※Qiitaと同じ内容です</p>
 
 <h1 id="前提">前提</h1>
 
@@ -240,7 +252,8 @@
 <p>作業時間がほんのちょっと短縮できます。</p>
 
 <p>※とても参考にさせて頂きました
-<a href="https://qiita.com/kanemu/items/679c4e14aee15441e33f">https://qiita.com/kanemu/items/679c4e14aee15441e33f</a></p></article>
+<a href="https://qiita.com/kanemu/items/679c4e14aee15441e33f">https://qiita.com/kanemu/items/679c4e14aee15441e33f</a></p>
+</article>
     <footer class="post-footer">
       
       <ul class="post-tags">

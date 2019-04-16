@@ -8,11 +8,6 @@
   </url>
   
   <url>
-    <loc>http://nanamisawa.github.io/post/20190415/</loc>
-    <lastmod>2019-04-15T00:44:03+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://nanamisawa.github.io/</loc>
     <lastmod>2019-04-15T00:44:03+09:00</lastmod>
     <priority>0</priority>
@@ -40,6 +35,11 @@
     <loc>http://nanamisawa.github.io/tags/linux/</loc>
     <lastmod>2019-04-15T00:44:03+09:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://nanamisawa.github.io/post/20190415/</loc>
+    <lastmod>2019-04-15T00:44:03+09:00</lastmod>
   </url>
   
   <url>
