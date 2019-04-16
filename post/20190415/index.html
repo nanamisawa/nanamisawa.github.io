@@ -29,11 +29,12 @@
   [misawa@host1 test]$ ssh host2 [misawa@host2 ~]$ 失敗例 function sshcd(){ current=`pwd` ssh $1 &amp;#34;cd $current&amp;#34; } これだとcdを実行したあと閉じるので元に戻ってしまう（ターミナルの見た目上は変化がない）
 [misawa@host1 test]$ sshcd host2 [misawa@host1 test]$ 成功例 function sshcd(){ current=`pwd` ssh -t $1 &amp;#34;cd $current&amp;amp;&amp;amp; /bin/bash&amp;#34; } こうすることでうまくいきました。
 [misawa@host1 test]$ sshcd host2 [misawa@host2 test]$ 作業時間がほんのちょっと短縮できます。
-※とても参考にさせて頂きました https://qiita.com/kanemu/items/679c4e14aee15441e33f">
+※とても参考にさせて頂きました
+https://qiita.com/kanemu/items/679c4e14aee15441e33f">
 
   
   
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@mswn7">
     <meta name="twitter:title" content="カレントディレクトリのままsshしたいときのための.bashrc設定">
     <meta name="twitter:description" content="※Qiitaと同じ内容です
@@ -41,8 +42,9 @@
   [misawa@host1 test]$ ssh host2 [misawa@host2 ~]$ 失敗例 function sshcd(){ current=`pwd` ssh $1 &amp;#34;cd $current&amp;#34; } これだとcdを実行したあと閉じるので元に戻ってしまう（ターミナルの見た目上は変化がない）
 [misawa@host1 test]$ sshcd host2 [misawa@host1 test]$ 成功例 function sshcd(){ current=`pwd` ssh -t $1 &amp;#34;cd $current&amp;amp;&amp;amp; /bin/bash&amp;#34; } こうすることでうまくいきました。
 [misawa@host1 test]$ sshcd host2 [misawa@host2 test]$ 作業時間がほんのちょっと短縮できます。
-※とても参考にさせて頂きました https://qiita.com/kanemu/items/679c4e14aee15441e33f">
-    <meta name="twitter:image" content="http://nanamisawa.github.io/">
+※とても参考にさせて頂きました
+https://qiita.com/kanemu/items/679c4e14aee15441e33f">
+    <meta name="twitter:image" content="/images/nana_android.png">
   
 
   
@@ -53,9 +55,10 @@
   [misawa@host1 test]$ ssh host2 [misawa@host2 ~]$ 失敗例 function sshcd(){ current=`pwd` ssh $1 &amp;#34;cd $current&amp;#34; } これだとcdを実行したあと閉じるので元に戻ってしまう（ターミナルの見た目上は変化がない）
 [misawa@host1 test]$ sshcd host2 [misawa@host1 test]$ 成功例 function sshcd(){ current=`pwd` ssh -t $1 &amp;#34;cd $current&amp;amp;&amp;amp; /bin/bash&amp;#34; } こうすることでうまくいきました。
 [misawa@host1 test]$ sshcd host2 [misawa@host2 test]$ 作業時間がほんのちょっと短縮できます。
-※とても参考にさせて頂きました https://qiita.com/kanemu/items/679c4e14aee15441e33f">
+※とても参考にさせて頂きました
+https://qiita.com/kanemu/items/679c4e14aee15441e33f">
   <meta property="og:url" content="http://nanamisawa.github.io/post/20190415/">
-  <meta property="og:image" content="http://nanamisawa.github.io/">
+  <meta property="og:image" content="/images/nana_android.png">
 
 
 
@@ -251,7 +254,7 @@
 <span class="o">[</span>misawa@host2 test<span class="o">]</span>$</code></pre></div>
 <p>作業時間がほんのちょっと短縮できます。</p>
 
-<p>※とても参考にさせて頂きました
+<p>※とても参考にさせて頂きました<br />
 <a href="https://qiita.com/kanemu/items/679c4e14aee15441e33f">https://qiita.com/kanemu/items/679c4e14aee15441e33f</a></p>
 </article>
     <footer class="post-footer">

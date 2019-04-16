@@ -22,7 +22,8 @@
   [misawa@host1 test]$ ssh host2 [misawa@host2 ~]$ 失敗例 function sshcd(){ current=`pwd` ssh $1 &amp;#34;cd $current&amp;#34; } これだとcdを実行したあと閉じるので元に戻ってしまう（ターミナルの見た目上は変化がない）
 [misawa@host1 test]$ sshcd host2 [misawa@host1 test]$ 成功例 function sshcd(){ current=`pwd` ssh -t $1 &amp;#34;cd $current&amp;amp;&amp;amp; /bin/bash&amp;#34; } こうすることでうまくいきました。
 [misawa@host1 test]$ sshcd host2 [misawa@host2 test]$ 作業時間がほんのちょっと短縮できます。
-※とても参考にさせて頂きました https://qiita.com/kanemu/items/679c4e14aee15441e33f</description>
+※とても参考にさせて頂きました
+https://qiita.com/kanemu/items/679c4e14aee15441e33f</description>
     </item>
     
     <item>
