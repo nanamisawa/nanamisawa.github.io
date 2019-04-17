@@ -199,7 +199,78 @@
   </header>
   
   
-        
+   <article class="post-entry">
+  <header class="post-header">
+    <h3 class="post-title"><a href="http://nanamisawa.github.io/post/20190415/" class="post-link">カレントディレクトリのままsshしたいときのための.bashrc設定</a></h3>
+    <p class="post-meta">@Nana Misawa · Apr 15, 2019 · 1 min read</p>
+  </header>
+  
+  <p class="post-summary">※Qiitaと同じ内容です
+前提  NFSで同様にファイルサーバがマウントされている計算機間でのsshログイン sshログイン後も元いたディレクトリのままになるようなコマンドを.bashrcで設定したい（通常はsshすると下のようにhomeディレクトリに移動する　いちいち元の場所にcdするのは面倒）
+  [misawa@host1 test]$ ssh host2 [misawa@host2 ~]$ 失敗例 function sshcd(){ current=`pwd` ssh $1 &#34;cd $current&#34; } これだとcdを実行したあと閉じるので元に戻ってしまう（ターミナルの見た目上は変化がない）
+[misawa@host1 test]$ sshcd host2 [misawa@host1 test]$ 成功例 function sshcd(){ current=`pwd` ssh -t $1 &#34;cd $current&amp;&amp; /bin/bash&#34; } こうすることでうまくいきました。
+[misawa@host1 test]$ sshcd host2 [misawa@host2 test]$ 作業時間がほんのちょっと短縮できます。
+※とても参考にさせて頂きました
+https://qiita.com/kanemu/items/679c4e14aee15441e33f</p>
+	<style>
+	.post-summary{
+	    width: 150px;
+	    height: 100px;
+	    background: #ccc;
+	    overflow: hidden;
+	}
+	</style>
+	
+  <footer class="post-footer">
+    <a class="read-more" href="http://nanamisawa.github.io/post/20190415/">Read More →</a>
+  </footer>
+</article>
+  <article class="post-entry">
+  <header class="post-header">
+    <h3 class="post-title"><a href="http://nanamisawa.github.io/post/20190411/" class="post-link">First post</a></h3>
+    <p class="post-meta">@Nana Misawa · Apr 11, 2019 · 1 min read</p>
+  </header>
+  
+  <p class="post-summary">このブログについて 筆者 ななみさわと申します。
+目的  仕入れた知識の整理 読んだ本・観た映画などの感想 将来設計模索のための思考整理 旅の記録  他のブログサイトとの使い分け  Qiita：技術関連記事 はてな：フィードバックがほしい記事 当ブログ：ただ残しておきたいだけの記事  作った経緯  最近になってアウトプットの重要性に気付いた（遅い）
+ はてなとかでは投稿しにくい私的な話・研究関連の話も含めたい
+ GitHubpages&#43;Hugoで運営するので、バージョン管理＆バックアップできる（Markdownなので他のブログにも移植できるはず） ほんとは自宅のラズパイをwebサーバにしてブログ公開ということも考えたが、諦めた（詳細はまた記事にする予定）  て感じです。
+連絡先 misawa.nana7(a)gmail.com までお願いします。</p>
+	<style>
+	.post-summary{
+	    width: 150px;
+	    height: 100px;
+	    background: #ccc;
+	    overflow: hidden;
+	}
+	</style>
+	
+  <footer class="post-footer">
+    <a class="read-more" href="http://nanamisawa.github.io/post/20190411/">Read More →</a>
+  </footer>
+</article>
+  <article class="post-entry">
+  <header class="post-header">
+    <h3 class="post-title"><a href="http://nanamisawa.github.io/post/test/" class="post-link">Test</a></h3>
+    <p class="post-meta">@Nana Misawa · Apr 10, 2019 · 1 min read</p>
+  </header>
+  
+  <p class="post-summary"> Test $$e^{i\pi} = -1$$
+echo &#34;Hello&#34;</p>
+	<style>
+	.post-summary{
+	    width: 150px;
+	    height: 100px;
+	    background: #ccc;
+	    overflow: hidden;
+	}
+	</style>
+	
+  <footer class="post-footer">
+    <a class="read-more" href="http://nanamisawa.github.io/post/test/">Read More →</a>
+  </footer>
+</article>
+ 
    
 </section>
 
