@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Studies on 7.</title>
+    <link>http://nanamisawa.github.io/study/</link>
+    <description>Recent content in Studies on 7.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Wed, 10 Apr 2019 15:32:47 +0900</lastBuildDate>
+    
+	<atom:link href="http://nanamisawa.github.io/study/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Test</title>
+      <link>http://nanamisawa.github.io/study/test/</link>
+      <pubDate>Wed, 10 Apr 2019 15:32:47 +0900</pubDate>
+      
+      <guid>http://nanamisawa.github.io/study/test/</guid>
+      <description> Test $$e^{i\pi} = -1$$
+1echo &amp;#34;Hello&amp;#34;</description>
+    </item>
+    
+  </channel>
+</rss>
