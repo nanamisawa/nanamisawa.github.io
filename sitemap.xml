@@ -54,12 +54,6 @@
   </url>
   
   <url>
-    <loc>http://nanamisawa.github.io/study/</loc>
-    <lastmod>2019-04-10T15:32:47+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://nanamisawa.github.io/post/test/</loc>
     <lastmod>2019-04-10T15:32:47+09:00</lastmod>
   </url>
@@ -67,6 +61,11 @@
   <url>
     <loc>http://nanamisawa.github.io/study/test/</loc>
     <lastmod>2019-04-10T15:32:47+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nanamisawa.github.io/study/</loc>
+    <lastmod>2017-03-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
