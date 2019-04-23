@@ -6,7 +6,7 @@
     <description>Recent content on 7.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 15 Apr 2019 00:44:03 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 23 Apr 2019 16:11:04 +0900</lastBuildDate>
     
 	<atom:link href="http://nanamisawa.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -35,6 +35,15 @@ This is nanamisawa 経歴 1993年　愛知県名古屋市　生まれ
 趣味  クラシックバレエ（週1回）
  映画鑑賞（月2~3本程度）
  スキューバダイビング（暫く行ってない）</description>
+    </item>
+    
+    <item>
+      <title>Test</title>
+      <link>http://nanamisawa.github.io/study/test/</link>
+      <pubDate>Tue, 23 Apr 2019 16:11:04 +0900</pubDate>
+      
+      <guid>http://nanamisawa.github.io/study/test/</guid>
+      <description>Test</description>
     </item>
     
     <item>
