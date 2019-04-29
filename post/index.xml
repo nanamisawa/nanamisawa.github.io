@@ -6,10 +6,37 @@
     <description>Recent content in Posts on 7.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 15 Apr 2019 00:44:03 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 29 Apr 2019 23:18:19 +0900</lastBuildDate>
     
 	<atom:link href="http://nanamisawa.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>おじいちゃん天国に行く</title>
+      <link>http://nanamisawa.github.io/post/20190429/</link>
+      <pubDate>Mon, 29 Apr 2019 23:18:19 +0900</pubDate>
+      
+      <guid>http://nanamisawa.github.io/post/20190429/</guid>
+      <description>4/27におじいちゃんが天国にいきました。
+書道が上手で日本・中国の文学に詳しかったおじいちゃん
+遊びに行くとたまに手を取って書道教えてくれました。
+私のバレエの発表会もよく見に来てくれて、
+踊りをいっぱい褒めてくれたのを思い出します。
+私が大学入ったときは、とても喜んでくれました。
+少しは孝行できたかな。
+認知症になってからは、誰かもわかってもらえず悲しくて、
+あんまり会いに行かなくてごめんね。
+たまに戦時中の話とかしてくれたのはきっと貴重な経験だったと思う。
+満州での厳しい戦線から命からがら逃げてきて、本当に悲惨な状況から。
+もし一日終戦が遅かったらこの世に父や私はいなかったかもしれないと思うと、
+おじいちゃんの血を受け継いだことは奇跡に近いのかもしれないとも思います。
+最期はみんなに見守られて、穏やかだったように思うけど、
+タイミングを見ていたのかなってくらい、みんなが集まってから息を引き取りましたね。
+こんなドラマみたいなことあるんだなーって思った。
+おじいちゃんは持ってるなあ！
+これまで、おつかれさまでした。
+天国でもおじいちゃんらしく賑やかに楽しく過ごしてね。</description>
+    </item>
     
     <item>
       <title>カレントディレクトリのままsshしたいときのための.bashrc設定</title>
