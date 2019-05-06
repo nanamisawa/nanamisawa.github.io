@@ -210,9 +210,84 @@
     
     
       
-        
+        <article class="post-entry">
+  <header class="post-header">
+    <h3 class="post-title"><a href="http://nanamisawa.github.io/post/20190415/" class="post-link">カレントディレクトリのままsshしたいときのための.bashrc設定</a></h3>
+    <p class="post-meta">@Nana Misawa · Apr 15, 2019 · 1 min read</p>
+  </header>
+  
+  <p class="post-summary">※Qiitaと同じ内容です
+前提  NFSで同様にファイルサーバがマウントされている計算機間でのsshログイン sshログイン後も元いたディレクトリのままになるようなコマンドを.bashrcで設定したい（通常はsshすると下のようにhomeディレクトリに移動する　いちいち元の場所にcdするのは面倒）
+  1[misawa@host1 test]$ ssh host2 2[misawa@host2 ~]$ 失敗例 1function sshcd(){ 2	current=`pwd` 3	ssh $1 &#34;cd $current&#34; 4} これだとcdを実行したあと閉じるので元に戻ってしまう（ターミナルの見た目上は変化がない）
+1[misawa@host1 test]$ sshcd host2 2[misawa@host1 test]$ 成功例 1function sshcd(){ 2	current=`pwd` 3	ssh -t $1 &#34;cd $current&amp;&amp; /bin/bash&#34; 4} こうすることでうまくいきました。
+1[misawa@host1 test]$ sshcd host2 2[misawa@host2 test]$ 作業時間がほんのちょっと短縮できます。
+※とても参考にさせて頂きました
+https://qiita.com/kanemu/items/679c4e14aee15441e33f</p>
+  
+	<style>
+	.post-summary{
+	    height: 50px;
+	    overflow: hidden;
+	}
+	</style>
+  
+  <footer class="post-footer">
+		  
+		  <ul class="article-tag-list">
+				  
+				  <li class="article-tag-list-item">
+						  <a href="/tags/bash"><span class="tag">Bash</span>
+						  </a>
+				  </li>
+				  
+				  <li class="article-tag-list-item">
+						  <a href="/tags/linux"><span class="tag">Linux</span>
+						  </a>
+				  </li>
+				  
+		  </ul>
+		  
+    <a class="read-more" href="http://nanamisawa.github.io/post/20190415/">Read More →</a>
+  </footer>
+</article>
+
       
-        
+        <article class="post-entry">
+  <header class="post-header">
+    <h3 class="post-title"><a href="http://nanamisawa.github.io/post/test/" class="post-link">Test</a></h3>
+    <p class="post-meta">@Nana Misawa · Apr 10, 2019 · 1 min read</p>
+  </header>
+  
+  <p class="post-summary"> Test $$e^{i\pi} = -1$$
+1echo &#34;Hello&#34;</p>
+  
+	<style>
+	.post-summary{
+	    height: 50px;
+	    overflow: hidden;
+	}
+	</style>
+  
+  <footer class="post-footer">
+		  
+		  <ul class="article-tag-list">
+				  
+				  <li class="article-tag-list-item">
+						  <a href="/tags/helloworld"><span class="tag">Helloworld</span>
+						  </a>
+				  </li>
+				  
+				  <li class="article-tag-list-item">
+						  <a href="/tags/bash"><span class="tag">Bash</span>
+						  </a>
+				  </li>
+				  
+		  </ul>
+		  
+    <a class="read-more" href="http://nanamisawa.github.io/post/test/">Read More →</a>
+  </footer>
+</article>
+
       
     
     
