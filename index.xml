@@ -43,14 +43,7 @@ This is nanamisawa 経歴 1993年　愛知県名古屋市　生まれ
       <pubDate>Tue, 07 May 2019 14:00:47 +0900</pubDate>
       
       <guid>http://nanamisawa.github.io/post/20190507/</guid>
-      <description> 学外からでも論文を簡単に読みたい せっかく学費払ってるんだからいつでも読めるようにしないと損!ということで。
-名古屋大学のVPNについては↓参照
-http://www.nul.nagoya-u.ac.jp/db/DBannai/ezproxy/index.html
-手順 スクリプトをブックマークに登録（Chromeの場合）  ブックマークバーを右クリック ページを追加 適当な名前をつける URLの欄に以下をコピペ  1javascript:l=window.location;p=l.pathname.split(&amp;#39;/&amp;#39;);d=p.pop();ll=&amp;#34;https://&amp;#34;+l.host.split(&amp;#39;.&amp;#39;).join(&amp;#39;-&amp;#39;)+&amp;#34;.ejgw.nul.nagoya-u.ac.jp&amp;#34;+p.join(&amp;#34;/&amp;#34;)+&amp;#34;/&amp;#34;+d+l.search;l.href=ll;  ※split(&amp;lsquo;.&amp;rsquo;).join(&amp;lsquo;-&amp;rsquo;)については正規表現.replace(/./g, &amp;lsquo;-&amp;rsquo;)がうまく行かず、回りくどくなっています。
-実際に学外から論文にアクセス  学外にいる状態で VPNログインしておく
-http://www.nul.nagoya-u.ac.jp.ejgw.nul.nagoya-u.ac.jp/db/DBannai/ezproxy/index.html
-”電子ジャーナルアクセスサービス”からログインしておく（ページは閉じてOK） 見たい論文のページにアクセスして、先程登録したブックマークをクリック、見れるようになったことを確認 続けて見たい論文があるときは、1を繰り返さずいきなり2でOK！
-※二時間ほど使わないとログアウトすることが考えられるので、その場合1を繰り返す必要が出ます。  </description>
+      <description></description>
     </item>
     
     <item>
@@ -93,13 +86,7 @@ http://www.nul.nagoya-u.ac.jp.ejgw.nul.nagoya-u.ac.jp/db/DBannai/ezproxy/index.h
       <pubDate>Mon, 15 Apr 2019 00:44:03 +0900</pubDate>
       
       <guid>http://nanamisawa.github.io/post/20190415/</guid>
-      <description>※Qiitaと同じ内容です
-前提  NFSで同様にファイルサーバがマウントされている計算機間でのsshログイン sshログイン後も元いたディレクトリのままになるようなコマンドを.bashrcで設定したい（通常はsshすると下のようにhomeディレクトリに移動する　いちいち元の場所にcdするのは面倒）
-  1[misawa@host1 test]$ ssh host2 2[misawa@host2 ~]$ 失敗例 1function sshcd(){ 2	current=`pwd` 3	ssh $1 &amp;#34;cd $current&amp;#34; 4} これだとcdを実行したあと閉じるので元に戻ってしまう（ターミナルの見た目上は変化がない）
-1[misawa@host1 test]$ sshcd host2 2[misawa@host1 test]$ 成功例 1function sshcd(){ 2	current=`pwd` 3	ssh -t $1 &amp;#34;cd $current&amp;amp;&amp;amp; /bin/bash&amp;#34; 4} こうすることでうまくいきました。
-1[misawa@host1 test]$ sshcd host2 2[misawa@host2 test]$ 作業時間がほんのちょっと短縮できます。
-※とても参考にさせて頂きました
-https://qiita.com/kanemu/items/679c4e14aee15441e33f</description>
+      <description></description>
     </item>
     
     <item>
