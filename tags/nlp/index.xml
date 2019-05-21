@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NLP on 7.</title>
+    <link>http://nanamisawa.github.io/tags/nlp/</link>
+    <description>Recent content in NLP on 7.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Fri, 17 May 2019 17:51:07 +0900</lastBuildDate>
+    
+	<atom:link href="http://nanamisawa.github.io/tags/nlp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>株式会社エス・エム・エスでのインターンシップ（無給）</title>
+      <link>http://nanamisawa.github.io/post/20190517/</link>
+      <pubDate>Fri, 17 May 2019 17:51:07 +0900</pubDate>
+      
+      <guid>http://nanamisawa.github.io/post/20190517/</guid>
+      <description>インターンシップ、はじめました 経緯 就活スカウトサイトのLabbaseに登録していたところ、
+株式会社エス・エム・エスさんにお声掛け頂きました。
+1.事業内容が介護・医療・ヘルスケアということで成長産業だと思い興味が湧いたのと、
+2.データサイエンスの仕事がどんなものか体験しようと思ったのと、
+3.実際にお話した社員さん方が非常に良くしてくださり雰囲気の良い会社だと思ったので、
+ぜひやってみたいと思い長期インターンシップをはじめました！ なかなかラボを休まずにできるインターンシップがあまり無い中、
+遠隔での作業が可能とのことで、とても有り難いです！
+内容 AWS上で自然言語処理による介護webサービス上のテキストデータ解析を行います。
+使用するフレームワーク anaGo, OpenNLP, MeCab, などなど
+意気込み かんばるぞい！</description>
+    </item>
+    
+  </channel>
+</rss>

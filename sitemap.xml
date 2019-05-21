@@ -8,25 +8,54 @@
   </url>
   
   <url>
-    <loc>http://nanamisawa.github.io/tags/javascript/</loc>
-    <lastmod>2019-05-07T14:00:47+09:00</lastmod>
+    <loc>http://nanamisawa.github.io/</loc>
+    <lastmod>2019-05-17T17:51:07+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://nanamisawa.github.io/</loc>
-    <lastmod>2019-05-07T14:00:47+09:00</lastmod>
+    <loc>http://nanamisawa.github.io/tags/aws/</loc>
+    <lastmod>2019-05-17T17:51:07+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://nanamisawa.github.io/tags/nlp/</loc>
+    <lastmod>2019-05-17T17:51:07+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://nanamisawa.github.io/post/</loc>
-    <lastmod>2019-05-07T14:00:47+09:00</lastmod>
+    <lastmod>2019-05-17T17:51:07+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://nanamisawa.github.io/tags/</loc>
+    <lastmod>2019-05-17T17:51:07+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://nanamisawa.github.io/tags/internship/</loc>
+    <lastmod>2019-05-17T17:51:07+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://nanamisawa.github.io/tags/tensorflow/</loc>
+    <lastmod>2019-05-17T17:51:07+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://nanamisawa.github.io/post/20190517/</loc>
+    <lastmod>2019-05-17T17:51:07+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nanamisawa.github.io/tags/javascript/</loc>
     <lastmod>2019-05-07T14:00:47+09:00</lastmod>
     <priority>0</priority>
   </url>
