@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>windows on 7.</title>
+    <link>http://nanamisawa.github.io/tags/windows/</link>
+    <description>Recent content in windows on 7.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Wed, 19 Jun 2019 15:19:52 +0900</lastBuildDate>
+    
+	<atom:link href="http://nanamisawa.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Windowsのエクスプローラーでのご移動を防ぐ</title>
+      <link>http://nanamisawa.github.io/post/20190619/</link>
+      <pubDate>Wed, 19 Jun 2019 15:19:52 +0900</pubDate>
+      
+      <guid>http://nanamisawa.github.io/post/20190619/</guid>
+      <description>https://gigazine.net/news/20150102-alterdnd-review/
+手抜きですがメモ^^;</description>
+    </item>
+    
+  </channel>
+</rss>
