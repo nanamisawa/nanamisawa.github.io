@@ -30,24 +30,6 @@
     </item>
     
     <item>
-      <title>Ph.D</title>
-      <link>http://nanamisawa.github.io/tags/ph.d/</link>
-      <pubDate>Tue, 21 May 2019 23:59:16 +0900</pubDate>
-      
-      <guid>http://nanamisawa.github.io/tags/ph.d/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>private</title>
-      <link>http://nanamisawa.github.io/tags/private/</link>
-      <pubDate>Tue, 21 May 2019 23:59:16 +0900</pubDate>
-      
-      <guid>http://nanamisawa.github.io/tags/private/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>AWS</title>
       <link>http://nanamisawa.github.io/tags/aws/</link>
       <pubDate>Fri, 17 May 2019 17:51:07 +0900</pubDate>
@@ -107,6 +89,15 @@
       <pubDate>Mon, 29 Apr 2019 23:18:19 +0900</pubDate>
       
       <guid>http://nanamisawa.github.io/tags/family/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>private</title>
+      <link>http://nanamisawa.github.io/tags/private/</link>
+      <pubDate>Mon, 29 Apr 2019 23:18:19 +0900</pubDate>
+      
+      <guid>http://nanamisawa.github.io/tags/private/</guid>
       <description></description>
     </item>
     
