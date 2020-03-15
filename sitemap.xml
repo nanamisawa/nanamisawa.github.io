@@ -9,19 +9,36 @@
   
   <url>
     <loc>http://nanamisawa.github.io/</loc>
-    <lastmod>2019-06-19T15:19:52+09:00</lastmod>
+    <lastmod>2020-03-15T18:15:07+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://nanamisawa.github.io/post/</loc>
-    <lastmod>2019-06-19T15:19:52+09:00</lastmod>
+    <lastmod>2020-03-15T18:15:07+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://nanamisawa.github.io/tags/</loc>
-    <lastmod>2019-06-19T15:19:52+09:00</lastmod>
+    <lastmod>2020-03-15T18:15:07+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://nanamisawa.github.io/post/vim_setting/</loc>
+    <lastmod>2020-03-15T18:15:07+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nanamisawa.github.io/tags/linux/</loc>
+    <lastmod>2020-03-15T18:15:07+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://nanamisawa.github.io/tags/vim/</loc>
+    <lastmod>2020-03-15T18:15:07+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -118,12 +135,6 @@
   
   <url>
     <loc>http://nanamisawa.github.io/tags/bash/</loc>
-    <lastmod>2019-04-15T00:44:03+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://nanamisawa.github.io/tags/linux/</loc>
     <lastmod>2019-04-15T00:44:03+09:00</lastmod>
     <priority>0</priority>
   </url>
