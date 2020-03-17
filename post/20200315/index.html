@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+  <meta charset="utf-8" />
+
+  
+  <title>deinvimのsettingについて</title>
+
+  
+  
+  <link href="//cdn.jsdelivr.net" rel="dns-prefetch">
+  <link href="//cdnjs.cloudflare.com" rel="dns-prefetch">
+  <link href="//at.alicdn.com" rel="dns-prefetch">
+  <link href="//fonts.googleapis.com" rel="dns-prefetch">
+  <link href="//fonts.gstatic.com" rel="dns-prefetch">
+  
+  
+  
+  
+  
+
+  
+
+  
+  <meta name="author" content="Author Name">
+  <meta name="description" content="新しくタブレットPCを買ったのでWSLの設定を簡単にメモ （bashrc, vimrcの備忘録）
+1# ~/.bashrc: executed by bash(1) for non-login shells. 2# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc) 3# for examples 4 5# If not running interactively, don&amp;#39;t do anything 6case $- in 7 *i*) ;; 8 *) return;; 9esac 10 11# don&amp;#39;t put duplicate lines or lines starting with space in the history. 12# See bash(1) for more options 13HISTCONTROL=ignoreboth 14 15# append to the history file, don&amp;#39;t overwrite it 16shopt -s histappend 17 18# for setting history length see HISTSIZE and HISTFILESIZE in bash(1) 19HISTSIZE=1000 20HISTFILESIZE=2000 21 22# check the window size after each command and, if necessary, 23# update the values of LINES and COLUMNS.">
+
+  
+  
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@mswn7">
+    <meta name="twitter:title" content="deinvimのsettingについて">
+    <meta name="twitter:description" content="新しくタブレットPCを買ったのでWSLの設定を簡単にメモ （bashrc, vimrcの備忘録）
+1# ~/.bashrc: executed by bash(1) for non-login shells. 2# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc) 3# for examples 4 5# If not running interactively, don&amp;#39;t do anything 6case $- in 7 *i*) ;; 8 *) return;; 9esac 10 11# don&amp;#39;t put duplicate lines or lines starting with space in the history. 12# See bash(1) for more options 13HISTCONTROL=ignoreboth 14 15# append to the history file, don&amp;#39;t overwrite it 16shopt -s histappend 17 18# for setting history length see HISTSIZE and HISTFILESIZE in bash(1) 19HISTSIZE=1000 20HISTFILESIZE=2000 21 22# check the window size after each command and, if necessary, 23# update the values of LINES and COLUMNS.">
+    <meta name="twitter:image" content="/images/nana_android.png">
+  
+
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="deinvimのsettingについて">
+  <meta property="og:description" content="新しくタブレットPCを買ったのでWSLの設定を簡単にメモ （bashrc, vimrcの備忘録）
+1# ~/.bashrc: executed by bash(1) for non-login shells. 2# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc) 3# for examples 4 5# If not running interactively, don&amp;#39;t do anything 6case $- in 7 *i*) ;; 8 *) return;; 9esac 10 11# don&amp;#39;t put duplicate lines or lines starting with space in the history. 12# See bash(1) for more options 13HISTCONTROL=ignoreboth 14 15# append to the history file, don&amp;#39;t overwrite it 16shopt -s histappend 17 18# for setting history length see HISTSIZE and HISTFILESIZE in bash(1) 19HISTSIZE=1000 20HISTFILESIZE=2000 21 22# check the window size after each command and, if necessary, 23# update the values of LINES and COLUMNS.">
+  <meta property="og:url" content="http://nanamisawa.github.io/post/20200315/">
+  <meta property="og:image" content="/images/nana_android.png">
+
+
+
+
+<meta name="generator" content="Hugo 0.55.5">
+
+
+<link rel="canonical" href="http://nanamisawa.github.io/post/20200315/">
+
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="format-detection" content="telephone=no,email=no,adress=no">
+<meta http-equiv="Cache-Control" content="no-transform">
+
+
+<meta name="robots" content="index,follow">
+<meta name="referrer" content="origin-when-cross-origin">
+
+
+
+
+
+
+
+<meta name="theme-color" content="#02b875">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="7.">
+<meta name="msapplication-tooltip" content="7.">
+<meta name='msapplication-navbutton-color' content="#02b875">
+<meta name="msapplication-TileColor" content="#02b875">
+<meta name="msapplication-TileImage" content="/icons/apple-icon-144x144.png">
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" sizes="192x192" href="/icons/android-icon-192x192.png">
+<link rel="apple-touch-icon" href="/icons/apple-icon-152x152.png">
+
+
+
+
+<link rel="preload" href="/styles/main.min.css" as="style">
+<link rel="preload" href="/styles/custom.min.css" as="style">
+<link rel="preload" href="https://fonts.googleapis.com/css?family=Lobster" as="style">
+<link rel="preload" href="/images/nana_android.png" as="image">
+<link rel="preload" href="/images/grey-prism.svg" as="image">
+
+
+<style>
+  body {
+    background: rgb(244, 243, 241) url('/images/grey-prism.svg') repeat fixed;
+	font-family: Helvetica,'Osaka','Meiryo',sans-serif;
+  }
+</style>
+<link rel="stylesheet" href="/styles/main.min.css">
+<link rel="stylesheet" href="/styles/custom.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.2/dist/medium-zoom.min.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/video.js@7.3.0/dist/video-js.min.css">
+
+
+
+  
+  
+<!--[if lte IE 8]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/videojs-ie8@1.1.2/dist/videojs-ie8.min.js"></script>
+<![endif]-->
+
+<!--[if lte IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/eligrey-classlist-js-polyfill@1.2.20180112/classList.min.js"></script>
+<![endif]-->
+
+
+</head>
+  <body>
+    
+    <div class="suspension">
+      <a role="button" aria-label="Go to top" title="Go to top" class="to-top is-hide"><span class="icon icon-up" aria-hidden="true"></span></a>
+      
+        
+      
+    </div>
+    
+    
+  <header class="site-header">
+  <img class="avatar" src="/images/nana_android.png" alt="Avatar">
+  
+  <h2 class="title">7.</h2>
+  
+  <p class="subtitle">It&#39;s a fluke.</p>
+  <button class="menu-toggle" type="button" aria-label="Main Menu" aria-expanded="false" tab-index="0">
+    <span class="icon icon-menu" aria-hidden="true"></span>
+  </button>
+
+  <nav class="site-menu collapsed">
+    <h2 class="offscreen">Main Menu</h2>
+    <ul class="menu-list">
+      
+      
+      
+      
+        <li class="menu-item
+          
+          
+           is-active">
+          <a href="/">Home</a>
+        </li>
+      
+        <li class="menu-item
+          
+          
+          ">
+          <a href="/about/">About</a>
+        </li>
+      
+        <li class="menu-item
+          
+          
+          ">
+          <a href="/study/">Study</a>
+        </li>
+      
+        <li class="menu-item
+          
+          
+          ">
+          <a href="https://scholar.google.co.jp/citations?user=QiscMP0AAAAJ&amp;hl">Papers</a>
+        </li>
+      
+        <li class="menu-item
+          
+          
+          ">
+          <a href="/tags/">Tags</a>
+        </li>
+      
+    </ul>
+  </nav>
+  <nav class="social-menu collapsed">
+    <h2 class="offscreen">Social Networks</h2>
+    <ul class="social-list"><li class="social-item">
+          <a href="mailto:misawa.nana7@gmail.com" title="Email" aria-label="Email">
+            <span class="icon icon-email" aria-hidden="true"></span>
+          </a>
+        </li><li class="social-item">
+          <a href="//github.com/nanamisawa" title="GitHub" aria-label="GitHub">
+            <span class="icon icon-github" aria-hidden="true"></span>
+          </a>
+        </li><li class="social-item">
+          <a href="//twitter.com/mswn7" title="Twitter" aria-label="Twitter">
+            <span class="icon icon-twitter" aria-hidden="true"></span>
+          </a>
+        </li></ul>
+  </nav>
+</header>
+
+  <section class="main post-detail">
+    <header class="post-header">
+      <h1 class="post-title">deinvimのsettingについて</h1>
+      <p class="post-meta">@Author Name · Mar 15, 2020 · 6 min read</p>
+	  <div class="toc">
+	   
+	  </div>
+    </header>
+    <article class="post-content"><p>新しくタブレットPCを買ったのでWSLの設定を簡単にメモ
+（bashrc, vimrcの備忘録）</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln">  1</span><span class="c1"># ~/.bashrc: executed by bash(1) for non-login shells.</span>
+<span class="ln">  2</span><span class="c1"># see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)</span>
+<span class="ln">  3</span><span class="c1"># for examples</span>
+<span class="ln">  4</span>
+<span class="ln">  5</span><span class="c1"># If not running interactively, don&#39;t do anything</span>
+<span class="ln">  6</span><span class="k">case</span> <span class="nv">$-</span> in
+<span class="ln">  7</span>    *i*<span class="o">)</span> <span class="p">;;</span>
+<span class="ln">  8</span>      *<span class="o">)</span> <span class="k">return</span><span class="p">;;</span>
+<span class="ln">  9</span><span class="k">esac</span>
+<span class="ln"> 10</span>
+<span class="ln"> 11</span><span class="c1"># don&#39;t put duplicate lines or lines starting with space in the history.</span>
+<span class="ln"> 12</span><span class="c1"># See bash(1) for more options</span>
+<span class="ln"> 13</span><span class="nv">HISTCONTROL</span><span class="o">=</span>ignoreboth
+<span class="ln"> 14</span>
+<span class="ln"> 15</span><span class="c1"># append to the history file, don&#39;t overwrite it</span>
+<span class="ln"> 16</span><span class="nb">shopt</span> -s histappend
+<span class="ln"> 17</span>
+<span class="ln"> 18</span><span class="c1"># for setting history length see HISTSIZE and HISTFILESIZE in bash(1)</span>
+<span class="ln"> 19</span><span class="nv">HISTSIZE</span><span class="o">=</span><span class="m">1000</span>
+<span class="ln"> 20</span><span class="nv">HISTFILESIZE</span><span class="o">=</span><span class="m">2000</span>
+<span class="ln"> 21</span>
+<span class="ln"> 22</span><span class="c1"># check the window size after each command and, if necessary,</span>
+<span class="ln"> 23</span><span class="c1"># update the values of LINES and COLUMNS.</span>
+<span class="ln"> 24</span><span class="nb">shopt</span> -s checkwinsize
+<span class="ln"> 25</span>
+<span class="ln"> 26</span><span class="c1"># If set, the pattern &#34;**&#34; used in a pathname expansion context will</span>
+<span class="ln"> 27</span><span class="c1"># match all files and zero or more directories and subdirectories.</span>
+<span class="ln"> 28</span><span class="c1">#shopt -s globstar</span>
+<span class="ln"> 29</span>
+<span class="ln"> 30</span><span class="c1"># make less more friendly for non-text input files, see lesspipe(1)</span>
+<span class="ln"> 31</span><span class="o">[</span> -x /usr/bin/lesspipe <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="nb">eval</span> <span class="s2">&#34;</span><span class="k">$(</span><span class="nv">SHELL</span><span class="o">=</span>/bin/sh lesspipe<span class="k">)</span><span class="s2">&#34;</span>
+<span class="ln"> 32</span>
+<span class="ln"> 33</span><span class="c1"># set variable identifying the chroot you work in (used in the prompt below)</span>
+<span class="ln"> 34</span><span class="k">if</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="si">${</span><span class="nv">debian_chroot</span><span class="k">:-</span><span class="si">}</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="o">[</span> -r /etc/debian_chroot <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+<span class="ln"> 35</span>    <span class="nv">debian_chroot</span><span class="o">=</span><span class="k">$(</span>cat /etc/debian_chroot<span class="k">)</span>
+<span class="ln"> 36</span><span class="k">fi</span>
+<span class="ln"> 37</span>
+<span class="ln"> 38</span><span class="c1"># set a fancy prompt (non-color, unless we know we &#34;want&#34; color)</span>
+<span class="ln"> 39</span><span class="k">case</span> <span class="s2">&#34;</span><span class="nv">$TERM</span><span class="s2">&#34;</span> in
+<span class="ln"> 40</span>    xterm-color<span class="p">|</span>*-256color<span class="o">)</span> <span class="nv">color_prompt</span><span class="o">=</span>yes<span class="p">;;</span>
+<span class="ln"> 41</span><span class="k">esac</span>
+<span class="ln"> 42</span>
+<span class="ln"> 43</span><span class="c1"># uncomment for a colored prompt, if the terminal has the capability; turned</span>
+<span class="ln"> 44</span><span class="c1"># off by default to not distract the user: the focus in a terminal window</span>
+<span class="ln"> 45</span><span class="c1"># should be on the output of commands, not on the prompt</span>
+<span class="ln"> 46</span><span class="c1">#force_color_prompt=yes</span>
+<span class="ln"> 47</span>
+<span class="ln"> 48</span><span class="k">if</span> <span class="o">[</span> -n <span class="s2">&#34;</span><span class="nv">$force_color_prompt</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+<span class="ln"> 49</span>    <span class="k">if</span> <span class="o">[</span> -x /usr/bin/tput <span class="o">]</span> <span class="o">&amp;&amp;</span> tput setaf <span class="m">1</span> &gt;<span class="p">&amp;</span>/dev/null<span class="p">;</span> <span class="k">then</span>
+<span class="ln"> 50</span>	<span class="c1"># We have color support; assume it&#39;s compliant with Ecma-48</span>
+<span class="ln"> 51</span>	<span class="c1"># (ISO/IEC-6429). (Lack of such support is extremely rare, and such</span>
+<span class="ln"> 52</span>	<span class="c1"># a case would tend to support setf rather than setaf.)</span>
+<span class="ln"> 53</span>	<span class="nv">color_prompt</span><span class="o">=</span>yes
+<span class="ln"> 54</span>    <span class="k">else</span>
+<span class="ln"> 55</span>	<span class="nv">color_prompt</span><span class="o">=</span>
+<span class="ln"> 56</span>    <span class="k">fi</span>
+<span class="ln"> 57</span><span class="k">fi</span>
+<span class="ln"> 58</span>
+<span class="ln"> 59</span><span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$color_prompt</span><span class="s2">&#34;</span> <span class="o">=</span> yes <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+<span class="ln"> 60</span>    <span class="nv">PS1</span><span class="o">=</span><span class="s1">&#39;${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ &#39;</span>
+<span class="ln"> 61</span><span class="k">else</span>
+<span class="ln"> 62</span>    <span class="nv">PS1</span><span class="o">=</span><span class="s1">&#39;${debian_chroot:+($debian_chroot)}\u@\h:\w\$ &#39;</span>
+<span class="ln"> 63</span><span class="k">fi</span>
+<span class="ln"> 64</span><span class="nb">unset</span> color_prompt force_color_prompt
+<span class="ln"> 65</span>
+<span class="ln"> 66</span><span class="c1"># If this is an xterm set the title to user@host:dir</span>
+<span class="ln"> 67</span><span class="k">case</span> <span class="s2">&#34;</span><span class="nv">$TERM</span><span class="s2">&#34;</span> in
+<span class="ln"> 68</span>xterm*<span class="p">|</span>rxvt*<span class="o">)</span>
+<span class="ln"> 69</span>    <span class="nv">PS1</span><span class="o">=</span><span class="s2">&#34;\[\e]0;</span><span class="si">${</span><span class="nv">debian_chroot</span><span class="p">:+(</span><span class="nv">$debian_chroot</span><span class="p">)</span><span class="si">}</span><span class="s2">\u@\h: \w\a\]</span><span class="nv">$PS1</span><span class="s2">&#34;</span>
+<span class="ln"> 70</span>    <span class="p">;;</span>
+<span class="ln"> 71</span>*<span class="o">)</span>
+<span class="ln"> 72</span>    <span class="p">;;</span>
+<span class="ln"> 73</span><span class="k">esac</span>
+<span class="ln"> 74</span>
+<span class="ln"> 75</span><span class="c1"># enable color support of ls and also add handy aliases</span>
+<span class="ln"> 76</span><span class="k">if</span> <span class="o">[</span> -x /usr/bin/dircolors <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+<span class="ln"> 77</span>    <span class="nb">test</span> -r ~/.dircolors <span class="o">&amp;&amp;</span> <span class="nb">eval</span> <span class="s2">&#34;</span><span class="k">$(</span>dircolors -b ~/.dircolors<span class="k">)</span><span class="s2">&#34;</span> <span class="o">||</span> <span class="nb">eval</span> <span class="s2">&#34;</span><span class="k">$(</span>dircolors -b<span class="k">)</span><span class="s2">&#34;</span>
+<span class="ln"> 78</span>    <span class="nb">alias</span> <span class="nv">ls</span><span class="o">=</span><span class="s1">&#39;ls --color=auto&#39;</span>
+<span class="ln"> 79</span>    <span class="c1">#alias dir=&#39;dir --color=auto&#39;</span>
+<span class="ln"> 80</span>    <span class="c1">#alias vdir=&#39;vdir --color=auto&#39;</span>
+<span class="ln"> 81</span>
+<span class="ln"> 82</span>    <span class="nb">alias</span> <span class="nv">grep</span><span class="o">=</span><span class="s1">&#39;grep --color=auto&#39;</span>
+<span class="ln"> 83</span>    <span class="nb">alias</span> <span class="nv">fgrep</span><span class="o">=</span><span class="s1">&#39;fgrep --color=auto&#39;</span>
+<span class="ln"> 84</span>    <span class="nb">alias</span> <span class="nv">egrep</span><span class="o">=</span><span class="s1">&#39;egrep --color=auto&#39;</span>
+<span class="ln"> 85</span><span class="k">fi</span>
+<span class="ln"> 86</span>
+<span class="ln"> 87</span><span class="c1"># colored GCC warnings and errors</span>
+<span class="ln"> 88</span><span class="c1">#export GCC_COLORS=&#39;error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01&#39;</span>
+<span class="ln"> 89</span>
+<span class="ln"> 90</span><span class="c1"># some more ls aliases</span>
+<span class="ln"> 91</span><span class="nb">alias</span> <span class="nv">ll</span><span class="o">=</span><span class="s1">&#39;ls -alF&#39;</span>
+<span class="ln"> 92</span><span class="nb">alias</span> <span class="nv">la</span><span class="o">=</span><span class="s1">&#39;ls -A&#39;</span>
+<span class="ln"> 93</span><span class="nb">alias</span> <span class="nv">l</span><span class="o">=</span><span class="s1">&#39;ls -CF&#39;</span>
+<span class="ln"> 94</span>
+<span class="ln"> 95</span><span class="c1"># Add an &#34;alert&#34; alias for long running commands.  Use like so:</span>
+<span class="ln"> 96</span><span class="c1">#   sleep 10; alert</span>
+<span class="ln"> 97</span><span class="nb">alias</span> <span class="nv">alert</span><span class="o">=</span><span class="s1">&#39;notify-send --urgency=low -i &#34;$([ $? = 0 ] &amp;&amp; echo terminal || echo error)&#34; &#34;$(history|tail -n1|sed -e &#39;</span><span class="se">\&#39;</span><span class="s1">&#39;s/^\s*[0-9]\+\s*//;s/[;&amp;|]\s*alert$//&#39;</span><span class="se">\&#39;</span><span class="s1">&#39;)&#34;&#39;</span>
+<span class="ln"> 98</span>
+<span class="ln"> 99</span><span class="c1"># Alias definitions.</span>
+<span class="ln">100</span><span class="c1"># You may want to put all your additions into a separate file like</span>
+<span class="ln">101</span><span class="c1"># ~/.bash_aliases, instead of adding them here directly.</span>
+<span class="ln">102</span><span class="c1"># See /usr/share/doc/bash-doc/examples in the bash-doc package.</span>
+<span class="ln">103</span>
+<span class="ln">104</span><span class="k">if</span> <span class="o">[</span> -f ~/.bash_aliases <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+<span class="ln">105</span>    . ~/.bash_aliases
+<span class="ln">106</span><span class="k">fi</span>
+<span class="ln">107</span>
+<span class="ln">108</span><span class="c1"># enable programmable completion features (you don&#39;t need to enable</span>
+<span class="ln">109</span><span class="c1"># this, if it&#39;s already enabled in /etc/bash.bashrc and /etc/profile</span>
+<span class="ln">110</span><span class="c1"># sources /etc/bash.bashrc).</span>
+<span class="ln">111</span><span class="k">if</span> ! <span class="nb">shopt</span> -oq posix<span class="p">;</span> <span class="k">then</span>
+<span class="ln">112</span>  <span class="k">if</span> <span class="o">[</span> -f /usr/share/bash-completion/bash_completion <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+<span class="ln">113</span>    . /usr/share/bash-completion/bash_completion
+<span class="ln">114</span>  <span class="k">elif</span> <span class="o">[</span> -f /etc/bash_completion <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+<span class="ln">115</span>    . /etc/bash_completion
+<span class="ln">116</span>  <span class="k">fi</span>
+<span class="ln">117</span><span class="k">fi</span>
+<span class="ln">118</span>
+<span class="ln">119</span><span class="nb">export</span> <span class="nv">PYENV_ROOT</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">/.pyenv&#34;</span>
+<span class="ln">120</span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$PYENV_ROOT</span><span class="s2">/bin:</span><span class="nv">$PATH</span><span class="s2">&#34;</span>
+<span class="ln">121</span><span class="nb">eval</span> <span class="s2">&#34;</span><span class="k">$(</span>pyenv init -<span class="k">)</span><span class="s2">&#34;</span>
+<span class="ln">122</span>
+<span class="ln">123</span><span class="c1">#X11 GUI</span>
+<span class="ln">124</span><span class="nb">export</span> <span class="nv">DISPLAY</span><span class="o">=</span>localhost:0.0</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln">  1</span><span class="nb">set</span> <span class="nv">runtimepath</span><span class="o">+=</span>~/.vim/dein/repos/github.com/Shougo/dein.vim
+<span class="ln">  2</span>
+<span class="ln">  3</span><span class="k">if</span> dein#load_state<span class="o">(</span><span class="s1">&#39;~/.vim/dein&#39;</span><span class="o">)</span>
+<span class="ln">  4</span>  call dein#begin<span class="o">(</span><span class="s1">&#39;~/.vim/dein&#39;</span><span class="o">)</span>
+<span class="ln">  5</span>
+<span class="ln">  6</span>  call dein#add<span class="o">(</span><span class="s1">&#39;~/.vim/dein/repos/github.com/Shougo/dein.vim&#39;</span><span class="o">)</span>
+<span class="ln">  7</span>  call dein#add<span class="o">(</span><span class="s1">&#39;Shougo/deoplete.nvim&#39;</span><span class="o">)</span>
+<span class="ln">  8</span>  call dein#add<span class="o">(</span><span class="s1">&#39;Shougo/dein.vim&#39;</span><span class="o">)</span>
+<span class="ln">  9</span><span class="s2">&#34;  call dein#add(&#39;Shougo/vimproc.vim&#39;, {&#39;build&#39;: &#39;make&#39;})
+</span><span class="ln"> 10</span><span class="s2">  call dein#add(&#39;Shougo/vimproc.vim&#39;, {
+</span><span class="ln"> 11</span><span class="s2">      \ &#39;build&#39;: {
+</span><span class="ln"> 12</span><span class="s2">      \     &#39;windows&#39; : &#39;tools\\update-dll-mingw&#39;,
+</span><span class="ln"> 13</span><span class="s2">      \     &#39;cygwin&#39;  : &#39;make -f make_cygwin.mak&#39;,
+</span><span class="ln"> 14</span><span class="s2">      \     &#39;mac&#39;     : &#39;make -f make_mac.mak&#39;,
+</span><span class="ln"> 15</span><span class="s2">      \     &#39;linux&#39;   : &#39;make&#39;,
+</span><span class="ln"> 16</span><span class="s2">      \     &#39;unix&#39;    : &#39;gmake&#39;,
+</span><span class="ln"> 17</span><span class="s2">      \    },
+</span><span class="ln"> 18</span><span class="s2">      \ })
+</span><span class="ln"> 19</span><span class="s2">
+</span><span class="ln"> 20</span><span class="s2">  call dein#add(&#39;pangloss/vim-javascript&#39;)
+</span><span class="ln"> 21</span><span class="s2">  call dein#add(&#39;Shougo/neocomplete.vim&#39;)
+</span><span class="ln"> 22</span><span class="s2">  call dein#add(&#39;thinca/vim-quickrun&#39;)
+</span><span class="ln"> 23</span><span class="s2">  call dein#add(&#39;Shougo/neomru.vim&#39;)
+</span><span class="ln"> 24</span><span class="s2">  call dein#add(&#39;shougo/neoyank.vim&#39;)
+</span><span class="ln"> 25</span><span class="s2">  call dein#add(&#39;Shougo/unite.vim&#39;)
+</span><span class="ln"> 26</span><span class="s2">  call dein#add(&#39;Shougo/neosnippet&#39;)
+</span><span class="ln"> 27</span><span class="s2">  call dein#add(&#39;Shougo/neoinclude.vim&#39;)
+</span><span class="ln"> 28</span><span class="s2">  call dein#add(&#39;Shougo/vimfiler.vim&#39;)
+</span><span class="ln"> 29</span><span class="s2">  call dein#add(&#39;Shougo/vimshell.vim&#39;)
+</span><span class="ln"> 30</span><span class="s2">  call dein#add(&#39;scrooloose/nerdtree&#39;)
+</span><span class="ln"> 31</span><span class="s2">  call dein#add(&#39;Townk/vim-autoclose&#39;)
+</span><span class="ln"> 32</span><span class="s2">&#34;</span>  call dein#add<span class="o">(</span><span class="s1">&#39;drillbits/nyan-modoki.vim&#39;</span><span class="o">)</span>
+<span class="ln"> 33</span>  call dein#add<span class="o">(</span><span class="s1">&#39;Shougo/neosnippet-snippets&#39;</span><span class="o">)</span>
+<span class="ln"> 34</span><span class="s2">&#34;  call dein#add(&#39;scrooloose/syntastic&#39;)
+</span><span class="ln"> 35</span><span class="s2">&#34;</span>  call dein#add<span class="o">(</span><span class="s1">&#39;vim-airline/vim-airline&#39;</span><span class="o">)</span>
+<span class="ln"> 36</span>  call dein#add<span class="o">(</span><span class="s1">&#39;itchyny/lightline.vim&#39;</span><span class="o">)</span>
+<span class="ln"> 37</span>  call dein#add<span class="o">(</span><span class="s1">&#39;tpope/vim-endwise&#39;</span><span class="o">)</span>
+<span class="ln"> 38</span>  call dein#add<span class="o">(</span><span class="s1">&#39;thinca/vim-ref&#39;</span><span class="o">)</span>
+<span class="ln"> 39</span>  call dein#add<span class="o">(</span><span class="s1">&#39;reireias/vim-cheatsheet&#39;</span><span class="o">)</span>
+<span class="ln"> 40</span>  <span class="k">if</span> !has<span class="o">(</span><span class="s1">&#39;nvim&#39;</span><span class="o">)</span>
+<span class="ln"> 41</span>    call dein#add<span class="o">(</span><span class="s1">&#39;roxma/nvim-yarp&#39;</span><span class="o">)</span>
+<span class="ln"> 42</span>    call dein#add<span class="o">(</span><span class="s1">&#39;roxma/vim-hug-neovim-rpc&#39;</span><span class="o">)</span>
+<span class="ln"> 43</span>  endif
+<span class="ln"> 44</span>
+<span class="ln"> 45</span>  call dein#end<span class="o">()</span>
+<span class="ln"> 46</span>  call dein#save_state<span class="o">()</span>
+<span class="ln"> 47</span>endif
+<span class="ln"> 48</span>
+<span class="ln"> 49</span>filetype plugin indent on
+<span class="ln"> 50</span>syntax <span class="nb">enable</span>
+<span class="ln"> 51</span>
+<span class="ln"> 52</span>
+<span class="ln"> 53</span><span class="k">if</span> dein#check_install<span class="o">()</span>
+<span class="ln"> 54</span>  call dein#install<span class="o">()</span>
+<span class="ln"> 55</span>endif
+<span class="ln"> 56</span>
+<span class="ln"> 57</span>syntax <span class="nb">enable</span>
+<span class="ln"> 58</span>colorscheme koehler
+<span class="ln"> 59</span>autocmd ColorScheme * highlight Visual <span class="nv">ctermbg</span><span class="o">=</span>red <span class="nv">guifg</span><span class="o">=</span>red
+<span class="ln"> 60</span><span class="nb">set</span> number <span class="s2">&#34;行番号を表示する
+</span><span class="ln"> 61</span><span class="s2">set title &#34;</span>編集中のファイル名を表示
+<span class="ln"> 62</span><span class="nb">set</span> showmatch <span class="s2">&#34;括弧入力時の対応する括弧を表示
+</span><span class="ln"> 63</span><span class="s2">syntax on &#34;</span>コードの色分け
+<span class="ln"> 64</span><span class="nb">set</span> <span class="nv">tabstop</span><span class="o">=</span><span class="m">4</span> <span class="s2">&#34;インデントをスペース4つ分に設定
+</span><span class="ln"> 65</span><span class="s2">set smartindent &#34;</span>オートインデント
+<span class="ln"> 66</span><span class="nb">set</span> noswapfile <span class="s2">&#34; .swapファイルを作らない 
+</span><span class="ln"> 67</span><span class="s2">set ignorecase &#34;</span>大文字/小文字の区別なく検索する
+<span class="ln"> 68</span><span class="nb">set</span> smartcase <span class="s2">&#34;検索文字列に大文字が含まれている場合は区別して検索する
+</span><span class="ln"> 69</span><span class="s2">set wrapscan &#34;</span>検索時に最後まで行ったら最初に戻る
+<span class="ln"> 70</span><span class="nb">set</span> <span class="nv">virtualedit</span><span class="o">=</span>block <span class="s2">&#34; vim の矩形選択で文字が無くても右へ進める
+</span><span class="ln"> 71</span><span class="s2">set backspace=indent,eol,start &#34;</span> 挿入モードでバックスペースで削除できるようにする
+<span class="ln"> 72</span><span class="nb">set</span> shellslash <span class="s2">&#34; Windowsでパスの区切り文字をスラッシュで扱う
+</span><span class="ln"> 73</span><span class="s2">
+</span><span class="ln"> 74</span><span class="s2">set showmatch matchtime=1 &#34;</span> 対応する括弧やブレースを表示 
+<span class="ln"> 75</span><span class="nb">set</span> <span class="nv">cinoptions</span><span class="o">+=</span>:0 <span class="s2">&#34; インデント方法の変更 
+</span><span class="ln"> 76</span><span class="s2">set cmdheight=2 &#34;</span> メッセージ表示欄を2行確保 
+<span class="ln"> 77</span><span class="nb">set</span> nowritebackup
+<span class="ln"> 78</span><span class="nb">set</span> nobackup
+<span class="ln"> 79</span><span class="nb">set</span> noswapfile
+<span class="ln"> 80</span>:set hlsearch
+<span class="ln"> 81</span><span class="s2">&#34; ヤンクをコピーの挙動に近づける(連続貼り付け) 
+</span><span class="ln"> 82</span><span class="s2">vnoremap pp &#34;</span>0p 
+<span class="ln"> 83</span> <span class="s2">&#34;quickrun
+</span><span class="ln"> 84</span><span class="s2"> &#34;</span>vimproc during quickrun http://d.hatena.ne.jp/osyo-manga/20130311/1363012363
+<span class="ln"> 85</span><span class="nb">let</span> g:quickrun_config<span class="o">={</span><span class="s1">&#39;*&#39;</span>: <span class="o">{</span><span class="s1">&#39;split&#39;</span>: <span class="s1">&#39;vertical&#39;</span><span class="o">}}</span>
+<span class="ln"> 86</span><span class="nb">set</span> splitright
+<span class="ln"> 87</span><span class="nb">let</span> g:quickrun_config <span class="o">=</span> <span class="o">{</span>
+<span class="ln"> 88</span>						<span class="se">\ </span>  <span class="s2">&#34;_&#34;</span> : <span class="o">{</span>
+<span class="ln"> 89</span>						<span class="se">\ </span>      <span class="s2">&#34;runner&#34;</span> : <span class="s2">&#34;vimproc&#34;</span>,
+<span class="ln"> 90</span>						<span class="se">\ </span>      <span class="s2">&#34;runner/vimproc/updatetime&#34;</span> : <span class="m">60</span>
+<span class="ln"> 91</span>						<span class="se">\ </span>  <span class="o">}</span>,
+<span class="ln"> 92</span>						<span class="se">\}</span>
+<span class="ln"> 93</span>nnoremap Q :QuickRun&lt;CR&gt;
+<span class="ln"> 94</span><span class="s2">&#34;nnoremap [qrun] &lt;Nop&gt;
+</span><span class="ln"> 95</span><span class="s2">&#34;</span>nmap &lt;Space&gt;q <span class="o">[</span>qrun<span class="o">]</span>
+<span class="ln"> 96</span><span class="s2">&#34;nnoremap [qrun]q :&lt;C-u&gt;QuickRun&lt;CR&gt; 
+</span><span class="ln"> 97</span><span class="s2">&#34;</span>nnoremap <span class="o">[</span>qrun<span class="o">]</span>p :&lt;C-u&gt;QuickRun&lt;Space&gt;python3&lt;Space&gt;-args&lt;Space&gt;
+<span class="ln"> 98</span><span class="s2">&#34;cheat-sheet
+</span><span class="ln"> 99</span><span class="s2">let g:cheatsheet#cheat_file = &#39;~/.vim-cheatsheet.txt&#39;
+</span><span class="ln">100</span><span class="s2"> &#34;</span> autocmd VimEnter * execute <span class="s1">&#39;NERDTree&#39;</span> <span class="s2">&#34; 開いたらNERDTree
+</span><span class="ln">101</span><span class="s2"> &#34;</span> Ctl+eでNERDTree
+<span class="ln">102</span> autocmd StdinReadPre * <span class="nb">let</span> s:std_in<span class="o">=</span><span class="m">1</span>
+<span class="ln">103</span> autocmd VimEnter * <span class="k">if</span> argc<span class="o">()</span> <span class="o">==</span> <span class="m">0</span> <span class="o">&amp;&amp;</span> !exists<span class="o">(</span><span class="s2">&#34;s:std_in&#34;</span><span class="o">)</span> <span class="p">|</span> NERDTree <span class="p">|</span> endif
+<span class="ln">104</span> <span class="nb">let</span> g:NERDTreeShowHidden<span class="o">=</span><span class="m">1</span>
+<span class="ln">105</span> nnoremap &lt;silent&gt;&lt;C-e&gt; :NERDTreeToggle&lt;CR&gt;
+<span class="ln">106</span> <span class="s2">&#34; nyan-modoki
+</span><span class="ln">107</span><span class="s2">&#34;</span><span class="nb">set</span> <span class="nv">laststatus</span><span class="o">=</span><span class="m">2</span>
+<span class="ln">108</span><span class="s2">&#34;set statusline=%F%m%r%h%w[%{&amp;ff}]%=%{g:NyanModoki()}(%l,%c)[%P]
+</span><span class="ln">109</span><span class="s2">&#34;</span><span class="nb">let</span> g:nyan_modoki_select_cat_face_number <span class="o">=</span> <span class="m">2</span>
+<span class="ln">110</span><span class="s2">&#34;let g:nayn_modoki_animation_enabled= 1
+</span><span class="ln">111</span><span class="s2">
+</span><span class="ln">112</span><span class="s2"> &#34;</span> syntastic
+<span class="ln">113</span><span class="s2">&#34;let g:syntastic_check_on_open=0 &#34;</span>ファイルを開いたときはチェックしない
+<span class="ln">114</span><span class="s2">&#34;let g:syntastic_check_on_save=1 &#34;</span>保存時にはチェック
+<span class="ln">115</span><span class="s2">&#34;let g:syntastic_check_on_wq = 0 &#34;</span> wqではチェックしない
+<span class="ln">116</span><span class="s2">&#34;let g:syntastic_auto_loc_list=1 &#34;</span>エラーがあったら自動でロケーションリストを開く
+<span class="ln">117</span><span class="s2">&#34;let g:syntastic_loc_list_height=6 &#34;</span>エラー表示ウィンドウの高さ
+<span class="ln">118</span><span class="s2">&#34;set statusline+=%#warningmsg# &#34;</span>エラーメッセージの書式
+<span class="ln">119</span><span class="s2">&#34;set statusline+=%{SyntasticStatuslineFlag()}
+</span><span class="ln">120</span><span class="s2">&#34;</span><span class="nb">set</span> <span class="nv">statusline</span><span class="o">+=</span>%*
+<span class="ln">121</span><span class="s2">&#34;let g:syntastic_javascript_checkers = [&#39;eslint&#39;] &#34;</span>ESLintを使う
+<span class="ln">122</span><span class="s2">&#34;let g:syntastic_mode_map = {
+</span><span class="ln">123</span><span class="s2">&#34;</span>      <span class="se">\ </span><span class="s1">&#39;mode&#39;</span>: <span class="s1">&#39;active&#39;</span>,
+<span class="ln">124</span><span class="s2">&#34;      \ &#39;active_filetypes&#39;: [&#39;javascript&#39;],
+</span><span class="ln">125</span><span class="s2">&#34;</span>      <span class="se">\ </span><span class="s1">&#39;passive_filetypes&#39;</span>: <span class="o">[]</span>
+<span class="ln">126</span><span class="s2">&#34;      \ }&#34;&#34;&#34;</span> <span class="s2">&#34;&#34;</span>
+<span class="ln">127</span>
+<span class="ln">128</span> <span class="s2">&#34; For tab setting https://qiita.com/wadako111/items/755e753677dd72d8036d
+</span><span class="ln">129</span><span class="s2"> &#34;</span> t1, t2,,,t9 で左からn番目のタブにジャンプ
+<span class="ln">130</span> <span class="s2">&#34; tc で新しいタブ, txでタブを閉じる
+</span><span class="ln">131</span><span class="s2"> &#34;</span> tn 次のタブ tp 前のタブ
+<span class="ln">132</span><span class="s2">&#34; Anywhere SID.
+</span><span class="ln">133</span><span class="s2">function! s:SID_PREFIX()
+</span><span class="ln">134</span><span class="s2">  return matchstr(expand(&#39;&lt;sfile&gt;&#39;), &#39;&lt;SNR&gt;\d\+_\zeSID_PREFIX</span>$<span class="s2">&#39;)
+</span><span class="ln">135</span><span class="s2">endfunction
+</span><span class="ln">136</span><span class="s2">
+</span><span class="ln">137</span><span class="s2">&#34;</span> Set tabline.
+<span class="ln">138</span><span class="k">function</span>! s:my_tabline<span class="o">()</span>  <span class="s2">&#34;{{{
+</span><span class="ln">139</span><span class="s2">  let s = &#39;&#39;
+</span><span class="ln">140</span><span class="s2">  for i in range(1, tabpagenr(&#39;</span>$<span class="s2">&#39;))
+</span><span class="ln">141</span><span class="s2">    let bufnrs = tabpagebuflist(i)
+</span><span class="ln">142</span><span class="s2">    let bufnr = bufnrs[tabpagewinnr(i) - 1]  &#34;</span> first window, first appears
+<span class="ln">143</span>    <span class="nb">let</span> <span class="nv">no</span> <span class="o">=</span> i  <span class="s2">&#34; display 0-origin tabpagenr.
+</span><span class="ln">144</span><span class="s2">    let mod = getbufvar(bufnr, &#39;&amp;modified&#39;) ? &#39;!&#39; : &#39; &#39;
+</span><span class="ln">145</span><span class="s2">    let title = fnamemodify(bufname(bufnr), &#39;:t&#39;)
+</span><span class="ln">146</span><span class="s2">    let title = &#39;[&#39; . title . &#39;]&#39;
+</span><span class="ln">147</span><span class="s2">    let s .= &#39;%&#39;.i.&#39;T&#39;
+</span><span class="ln">148</span><span class="s2">    let s .= &#39;%#&#39; . (i == tabpagenr() ? &#39;TabLineSel&#39; : &#39;TabLine&#39;) . &#39;#&#39;
+</span><span class="ln">149</span><span class="s2">    let s .= no . &#39;:&#39; . title
+</span><span class="ln">150</span><span class="s2">    let s .= mod
+</span><span class="ln">151</span><span class="s2">    let s .= &#39;%#TabLineFill# &#39;
+</span><span class="ln">152</span><span class="s2">  endfor
+</span><span class="ln">153</span><span class="s2">  let s .= &#39;%#TabLineFill#%T%=%#TabLine#&#39;
+</span><span class="ln">154</span><span class="s2">  return s
+</span><span class="ln">155</span><span class="s2">endfunction &#34;</span><span class="o">}}}</span>
+<span class="ln">156</span><span class="nb">let</span> <span class="p">&amp;</span><span class="nv">tabline</span> <span class="o">=</span> <span class="s1">&#39;%!&#39;</span>. s:SID_PREFIX<span class="o">()</span> . <span class="s1">&#39;my_tabline()&#39;</span>
+<span class="ln">157</span><span class="nb">set</span> <span class="nv">showtabline</span><span class="o">=</span><span class="m">2</span> <span class="s2">&#34; 常にタブラインを表示
+</span><span class="ln">158</span><span class="s2">
+</span><span class="ln">159</span><span class="s2">&#34;</span> The prefix key.
+<span class="ln">160</span>nnoremap    <span class="o">[</span>Tag<span class="o">]</span>   &lt;Nop&gt;
+<span class="ln">161</span>nmap    t <span class="o">[</span>Tag<span class="o">]</span>
+<span class="ln">162</span><span class="s2">&#34; Tab jump
+</span><span class="ln">163</span><span class="s2">for n in range(1, 9)
+</span><span class="ln">164</span><span class="s2">  execute &#39;nnoremap &lt;silent&gt; [Tag]&#39;.n  &#39;:&lt;C-u&gt;tabnext&#39;.n.&#39;&lt;CR&gt;&#39;
+</span><span class="ln">165</span><span class="s2">endfor
+</span><span class="ln">166</span><span class="s2">&#34;</span> t1 で1番左のタブ、t2 で1番左から2番目のタブにジャンプ
+<span class="ln">167</span>
+<span class="ln">168</span>map &lt;silent&gt; <span class="o">[</span>Tag<span class="o">]</span>c :tablast &lt;bar&gt; tabnew&lt;CR&gt;
+<span class="ln">169</span><span class="s2">&#34; tc 新しいタブを一番右に作る
+</span><span class="ln">170</span><span class="s2">map &lt;silent&gt; [Tag]x :tabclose&lt;CR&gt;
+</span><span class="ln">171</span><span class="s2">&#34;</span> tx タブを閉じる
+<span class="ln">172</span>map &lt;silent&gt; <span class="o">[</span>Tag<span class="o">]</span>n :tabnext&lt;CR&gt;
+<span class="ln">173</span><span class="s2">&#34; tn 次のタブ
+</span><span class="ln">174</span><span class="s2">map &lt;silent&gt; [Tag]p :tabprevious&lt;CR&gt;
+</span><span class="ln">175</span><span class="s2">&#34;</span> tp 前のタブ</code></pre></div></article>
+	
+
+ 
+    <footer class="post-footer">
+      
+      <ul class="post-tags">
+        
+          <li><a href="/tags/vim"><span class="tag">Vim</span></a></li>
+        
+          <li><a href="/tags/linux"><span class="tag">Linux</span></a></li>
+        
+      </ul>
+      
+      <p class="post-copyright">
+        
+      </p>
+    </footer>
+    
+      
+    
+  </section>
+  
+<footer class="site-footer">
+
+  
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@15.0.0/dist/smooth-scroll.min.js"></script>
+
+
+
+<script async src="https://cdn.jsdelivr.net/npm/video.js@7.3.0/dist/video.min.js"></script>
+
+
+
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+      extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    },
+  });
+</script>
+<script type="text/x-mathjax-config">
+  // Fix <code> tags after MathJax finishes running. This is a
+  // hack to overcome a shortcoming of Markdown. Discussion at
+  // https://github.com/mojombo/jekyll/issues/199
+  MathJax.Hub.Queue(() => {
+    MathJax.Hub.getAllJax().map(v => v.SourceElement().parentNode.className += ' has-jax');
+  });
+</script>
+
+
+
+<script src="/scripts/index.min.js"></script>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('\/service-worker.js').then(function() {
+      console.log('[ServiceWorker] Registered');
+    });
+  }
+</script>
+
+<style>
+  body {
+	font-family: Helvetica,'Osaka','Meiryo',sans-serif;
+  }
+</style>
+
+
+
+
+
+
+
+
+  </body>
+</html>

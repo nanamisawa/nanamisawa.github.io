@@ -6,7 +6,7 @@
     <description>Recent content on 7.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 19 Jun 2019 15:19:52 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2020 18:15:07 +0900</lastBuildDate>
     
 	<atom:link href="http://nanamisawa.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -34,6 +34,16 @@ This is nanamisawa 経歴 1993年　愛知県名古屋市　生まれ
  スキューバダイビング（暫く行ってない）
  ネットサーフィン（毎日活動中！）
   特技  軟体芸（Y字バランス・立ち姿勢からのブリッジなど） 買い物（日頃のネットサーフィンの賜物 効率よく最安値を探し当てます）  資格  PADI オープンウォーター（高校一年時取得）</description>
+    </item>
+    
+    <item>
+      <title>deinvimのsettingについて</title>
+      <link>http://nanamisawa.github.io/post/20200315/</link>
+      <pubDate>Sun, 15 Mar 2020 18:15:07 +0900</pubDate>
+      
+      <guid>http://nanamisawa.github.io/post/20200315/</guid>
+      <description>新しくタブレットPCを買ったのでWSLの設定を簡単にメモ （bashrc, vimrcの備忘録）
+1# ~/.bashrc: executed by bash(1) for non-login shells. 2# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc) 3# for examples 4 5# If not running interactively, don&amp;#39;t do anything 6case $- in 7 *i*) ;; 8 *) return;; 9esac 10 11# don&amp;#39;t put duplicate lines or lines starting with space in the history. 12# See bash(1) for more options 13HISTCONTROL=ignoreboth 14 15# append to the history file, don&amp;#39;t overwrite it 16shopt -s histappend 17 18# for setting history length see HISTSIZE and HISTFILESIZE in bash(1) 19HISTSIZE=1000 20HISTFILESIZE=2000 21 22# check the window size after each command and, if necessary, 23# update the values of LINES and COLUMNS.</description>
     </item>
     
     <item>

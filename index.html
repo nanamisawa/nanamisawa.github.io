@@ -206,6 +206,34 @@
   
    <article class="post-entry">
   <header class="post-header">
+    <h3 class="post-title"><a href="http://nanamisawa.github.io/post/20200315/" class="post-link">deinvimのsettingについて</a></h3>
+	<p class="post-meta">@Nana Misawa · Mar 15, 2020 · 6 min read</p>
+  </header>
+  
+  <p class="post-summary">新しくタブレットPCを買ったのでWSLの設定を簡単にメモ （bashrc, vimrcの備忘録）
+1# ~/.bashrc: executed by bash(1) for non-login shells. 2# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc) 3# for examples 4 5# If not running interactively, don&#39;t do anything 6case $- in 7 *i*) ;; 8 *) return;; 9esac 10 11# don&#39;t put duplicate lines or lines starting with space in the history. 12# See bash(1) for more options 13HISTCONTROL=ignoreboth 14 15# append to the history file, don&#39;t overwrite it 16shopt -s histappend 17 18# for setting history length see HISTSIZE and HISTFILESIZE in bash(1) 19HISTSIZE=1000 20HISTFILESIZE=2000 21 22# check the window size after each command and, if necessary, 23# update the values of LINES and COLUMNS.</p> 
+  
+  <footer class="post-footer">
+	
+	
+	<ul class="article-tag-list">
+	  
+	  <li class="article-tag-list-item">
+	  	<a class="article-tag-list-link" href="/tags/vim"><span class="tag">Vim</span></a>
+	  </li>
+	  
+	  <li class="article-tag-list-item">
+	  	<a class="article-tag-list-link" href="/tags/linux"><span class="tag">Linux</span></a>
+	  </li>
+	  
+	</ul>
+	
+    <br>
+	
+  </footer>
+</article>
+  <article class="post-entry">
+  <header class="post-header">
     <h3 class="post-title"><a href="http://nanamisawa.github.io/post/20190619/" class="post-link">Windowsのエクスプローラーでのご移動を防ぐ</a></h3>
 	<p class="post-meta">@Nana Misawa · Jun 19, 2019 · 1 min read</p>
   </header>
