@@ -6,20 +6,10 @@
     <description>Recent content in linux on 7.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 15 Mar 2020 18:15:07 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 15 Apr 2019 00:44:03 +0900</lastBuildDate>
     
 	<atom:link href="http://nanamisawa.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Vim_setting</title>
-      <link>http://nanamisawa.github.io/post/vim_setting/</link>
-      <pubDate>Sun, 15 Mar 2020 18:15:07 +0900</pubDate>
-      
-      <guid>http://nanamisawa.github.io/post/vim_setting/</guid>
-      <description>bashrc, vimrcの備忘録
-1# ~/.bashrc: executed by bash(1) for non-login shells. 2# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc) 3# for examples 4 5# If not running interactively, don&amp;#39;t do anything 6case $- in 7 *i*) ;; 8 *) return;; 9esac 10 11# don&amp;#39;t put duplicate lines or lines starting with space in the history. 12# See bash(1) for more options 13HISTCONTROL=ignoreboth 14 15# append to the history file, don&amp;#39;t overwrite it 16shopt -s histappend 17 18# for setting history length see HISTSIZE and HISTFILESIZE in bash(1) 19HISTSIZE=1000 20HISTFILESIZE=2000 21 22# check the window size after each command and, if necessary, 23# update the values of LINES and COLUMNS.</description>
-    </item>
     
     <item>
       <title>カレントディレクトリのままsshしたいときのための.bashrc設定</title>
