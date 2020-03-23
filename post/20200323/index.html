@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+  <meta charset="utf-8" />
+
+  
+  <title>WSL UbuntuにHugoを入れてGitHub Pagesで公開するまでの話</title>
+
+  
+  
+  <link href="//cdn.jsdelivr.net" rel="dns-prefetch">
+  <link href="//cdnjs.cloudflare.com" rel="dns-prefetch">
+  <link href="//at.alicdn.com" rel="dns-prefetch">
+  <link href="//fonts.googleapis.com" rel="dns-prefetch">
+  <link href="//fonts.gstatic.com" rel="dns-prefetch">
+  
+  
+  
+  
+  
+
+  
+
+  
+  <meta name="author" content="Author Name">
+  <meta name="description" content="経緯 ブログを作ろうと考えていたとき、レンタルサーバ/自宅サーバにWordPress入れるのはお金がかかる/管理大変なのがネックだと思ってたのですが、(最初手持ちのラズパイで試してみたらめっちゃ遅かった(汗)) Hugo&#43;GitHub Pagesでサーバレスに静的ブログサイトが作れるらしいということで挑戦してみたらサクサクand管理楽ちんで感動した。
+まずはGitHub Pagesで自分のページを作る 作り方 適当にindex.htmlを置いてみて、 https://[ユーザ名].github.io/ にアクセスしてみると表示されるはず。
+ローカル環境にHugoを導入 私の場合WSL(Ubuntu)にHugoをインストールしたのですが、 apt-getするとあとで面倒になります。 考えずにapt-getしたらバージョンが低いのが入ってしまっていました。 利用したいテーマによっては古いバージョンに対応してませんので注意です。 scssなどを使いたい場合はextendedバージョンを入れます。（私はextendedを入れました。） https://gohugo.io/getting-started/installing これよく読んでインストールします。 自分は結局HugoのGitHub repoから.debファイルを持ってきてインストールしました。
+ローカルでテスト記事作り 無事にGitHub Pagesを作ってHugoがインストールできたらローカルでサイトを作っていきます。
+1$ hugo new site myblog 2$ cd myblog/ 3$ hugo server http://localhost:1313にブランクページが表示されます。 確認したらCtrl&#43;C。
+このへんで自分のgithubレポジトリにmyblogというのを新規作成しておきます。 あとは好みのHugo themeを見つけてきて（私の場合はhugo-nuoにしました）myblog/themes/にクローンします。
+1$ cd themes 2$ git clone https://github.com/laozhu/hugo-nuo.git 3$ ls 4hugo-nuo 次はmyblog/config.tomlを編集していきます。 自分の場合は
+1baseURL = &amp;#34;http://[ユーザ名].github.io/&amp;#34; 2languageCode = &amp;#34;ja&amp;#34; 3title = &amp;#34;7.&amp;#34; 4theme = &amp;#34;hugo-nuo&amp;#34; 5 6[[menu.main]] 7 name = &amp;#34;Home&amp;#34; 8 weight = 10 9 identifier = &amp;#34;home&amp;#34; 10 url = &amp;#34;/&amp;#34; 11 12[[menu.">
+
+  
+  
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@mswn7">
+    <meta name="twitter:title" content="WSL UbuntuにHugoを入れてGitHub Pagesで公開するまでの話">
+    <meta name="twitter:description" content="経緯 ブログを作ろうと考えていたとき、レンタルサーバ/自宅サーバにWordPress入れるのはお金がかかる/管理大変なのがネックだと思ってたのですが、(最初手持ちのラズパイで試してみたらめっちゃ遅かった(汗)) Hugo&#43;GitHub Pagesでサーバレスに静的ブログサイトが作れるらしいということで挑戦してみたらサクサクand管理楽ちんで感動した。
+まずはGitHub Pagesで自分のページを作る 作り方 適当にindex.htmlを置いてみて、 https://[ユーザ名].github.io/ にアクセスしてみると表示されるはず。
+ローカル環境にHugoを導入 私の場合WSL(Ubuntu)にHugoをインストールしたのですが、 apt-getするとあとで面倒になります。 考えずにapt-getしたらバージョンが低いのが入ってしまっていました。 利用したいテーマによっては古いバージョンに対応してませんので注意です。 scssなどを使いたい場合はextendedバージョンを入れます。（私はextendedを入れました。） https://gohugo.io/getting-started/installing これよく読んでインストールします。 自分は結局HugoのGitHub repoから.debファイルを持ってきてインストールしました。
+ローカルでテスト記事作り 無事にGitHub Pagesを作ってHugoがインストールできたらローカルでサイトを作っていきます。
+1$ hugo new site myblog 2$ cd myblog/ 3$ hugo server http://localhost:1313にブランクページが表示されます。 確認したらCtrl&#43;C。
+このへんで自分のgithubレポジトリにmyblogというのを新規作成しておきます。 あとは好みのHugo themeを見つけてきて（私の場合はhugo-nuoにしました）myblog/themes/にクローンします。
+1$ cd themes 2$ git clone https://github.com/laozhu/hugo-nuo.git 3$ ls 4hugo-nuo 次はmyblog/config.tomlを編集していきます。 自分の場合は
+1baseURL = &amp;#34;http://[ユーザ名].github.io/&amp;#34; 2languageCode = &amp;#34;ja&amp;#34; 3title = &amp;#34;7.&amp;#34; 4theme = &amp;#34;hugo-nuo&amp;#34; 5 6[[menu.main]] 7 name = &amp;#34;Home&amp;#34; 8 weight = 10 9 identifier = &amp;#34;home&amp;#34; 10 url = &amp;#34;/&amp;#34; 11 12[[menu.">
+    <meta name="twitter:image" content="/images/nana_android.png">
+  
+
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="WSL UbuntuにHugoを入れてGitHub Pagesで公開するまでの話">
+  <meta property="og:description" content="経緯 ブログを作ろうと考えていたとき、レンタルサーバ/自宅サーバにWordPress入れるのはお金がかかる/管理大変なのがネックだと思ってたのですが、(最初手持ちのラズパイで試してみたらめっちゃ遅かった(汗)) Hugo&#43;GitHub Pagesでサーバレスに静的ブログサイトが作れるらしいということで挑戦してみたらサクサクand管理楽ちんで感動した。
+まずはGitHub Pagesで自分のページを作る 作り方 適当にindex.htmlを置いてみて、 https://[ユーザ名].github.io/ にアクセスしてみると表示されるはず。
+ローカル環境にHugoを導入 私の場合WSL(Ubuntu)にHugoをインストールしたのですが、 apt-getするとあとで面倒になります。 考えずにapt-getしたらバージョンが低いのが入ってしまっていました。 利用したいテーマによっては古いバージョンに対応してませんので注意です。 scssなどを使いたい場合はextendedバージョンを入れます。（私はextendedを入れました。） https://gohugo.io/getting-started/installing これよく読んでインストールします。 自分は結局HugoのGitHub repoから.debファイルを持ってきてインストールしました。
+ローカルでテスト記事作り 無事にGitHub Pagesを作ってHugoがインストールできたらローカルでサイトを作っていきます。
+1$ hugo new site myblog 2$ cd myblog/ 3$ hugo server http://localhost:1313にブランクページが表示されます。 確認したらCtrl&#43;C。
+このへんで自分のgithubレポジトリにmyblogというのを新規作成しておきます。 あとは好みのHugo themeを見つけてきて（私の場合はhugo-nuoにしました）myblog/themes/にクローンします。
+1$ cd themes 2$ git clone https://github.com/laozhu/hugo-nuo.git 3$ ls 4hugo-nuo 次はmyblog/config.tomlを編集していきます。 自分の場合は
+1baseURL = &amp;#34;http://[ユーザ名].github.io/&amp;#34; 2languageCode = &amp;#34;ja&amp;#34; 3title = &amp;#34;7.&amp;#34; 4theme = &amp;#34;hugo-nuo&amp;#34; 5 6[[menu.main]] 7 name = &amp;#34;Home&amp;#34; 8 weight = 10 9 identifier = &amp;#34;home&amp;#34; 10 url = &amp;#34;/&amp;#34; 11 12[[menu.">
+  <meta property="og:url" content="http://nanamisawa.github.io/post/20200323/">
+  <meta property="og:image" content="/images/nana_android.png">
+
+
+
+
+<meta name="generator" content="Hugo 0.55.5">
+
+
+<link rel="canonical" href="http://nanamisawa.github.io/post/20200323/">
+
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="format-detection" content="telephone=no,email=no,adress=no">
+<meta http-equiv="Cache-Control" content="no-transform">
+
+
+<meta name="robots" content="index,follow">
+<meta name="referrer" content="origin-when-cross-origin">
+
+
+
+
+
+
+
+<meta name="theme-color" content="#02b875">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="7.">
+<meta name="msapplication-tooltip" content="7.">
+<meta name='msapplication-navbutton-color' content="#02b875">
+<meta name="msapplication-TileColor" content="#02b875">
+<meta name="msapplication-TileImage" content="/icons/apple-icon-144x144.png">
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" sizes="192x192" href="/icons/android-icon-192x192.png">
+<link rel="apple-touch-icon" href="/icons/apple-icon-152x152.png">
+
+
+
+
+<link rel="preload" href="/styles/main.min.css" as="style">
+<link rel="preload" href="/styles/custom.min.css" as="style">
+<link rel="preload" href="https://fonts.googleapis.com/css?family=Lobster" as="style">
+<link rel="preload" href="/images/nana_android.png" as="image">
+<link rel="preload" href="/images/grey-prism.svg" as="image">
+
+
+<style>
+  body {
+    background: rgb(244, 243, 241) url('/images/grey-prism.svg') repeat fixed;
+	font-family: Helvetica,'Osaka','Meiryo',sans-serif;
+  }
+</style>
+<link rel="stylesheet" href="/styles/main.min.css">
+<link rel="stylesheet" href="/styles/custom.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.2/dist/medium-zoom.min.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/video.js@7.3.0/dist/video-js.min.css">
+
+
+
+  
+  
+<!--[if lte IE 8]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/videojs-ie8@1.1.2/dist/videojs-ie8.min.js"></script>
+<![endif]-->
+
+<!--[if lte IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/eligrey-classlist-js-polyfill@1.2.20180112/classList.min.js"></script>
+<![endif]-->
+
+
+</head>
+  <body>
+    
+    <div class="suspension">
+      <a role="button" aria-label="Go to top" title="Go to top" class="to-top is-hide"><span class="icon icon-up" aria-hidden="true"></span></a>
+      
+        
+      
+    </div>
+    
+    
+  <header class="site-header">
+  <img class="avatar" src="/images/nana_android.png" alt="Avatar">
+  
+  <h2 class="title">7.</h2>
+  
+  <p class="subtitle">It&#39;s a fluke.</p>
+  <button class="menu-toggle" type="button" aria-label="Main Menu" aria-expanded="false" tab-index="0">
+    <span class="icon icon-menu" aria-hidden="true"></span>
+  </button>
+
+  <nav class="site-menu collapsed">
+    <h2 class="offscreen">Main Menu</h2>
+    <ul class="menu-list">
+      
+      
+      
+      
+        <li class="menu-item
+          
+          
+           is-active">
+          <a href="/">Home</a>
+        </li>
+      
+        <li class="menu-item
+          
+          
+          ">
+          <a href="/about/">About</a>
+        </li>
+      
+        <li class="menu-item
+          
+          
+          ">
+          <a href="/study/">Study</a>
+        </li>
+      
+        <li class="menu-item
+          
+          
+          ">
+          <a href="https://scholar.google.co.jp/citations?user=QiscMP0AAAAJ&amp;hl">Papers</a>
+        </li>
+      
+        <li class="menu-item
+          
+          
+          ">
+          <a href="/tags/">Tags</a>
+        </li>
+      
+    </ul>
+  </nav>
+  <nav class="social-menu collapsed">
+    <h2 class="offscreen">Social Networks</h2>
+    <ul class="social-list"><li class="social-item">
+          <a href="mailto:misawa.nana7@gmail.com" title="Email" aria-label="Email">
+            <span class="icon icon-email" aria-hidden="true"></span>
+          </a>
+        </li><li class="social-item">
+          <a href="//github.com/nanamisawa" title="GitHub" aria-label="GitHub">
+            <span class="icon icon-github" aria-hidden="true"></span>
+          </a>
+        </li><li class="social-item">
+          <a href="//twitter.com/mswn7" title="Twitter" aria-label="Twitter">
+            <span class="icon icon-twitter" aria-hidden="true"></span>
+          </a>
+        </li></ul>
+  </nav>
+</header>
+
+  <section class="main post-detail">
+    <header class="post-header">
+      <h1 class="post-title">WSL UbuntuにHugoを入れてGitHub Pagesで公開するまでの話</h1>
+      <p class="post-meta">@Author Name · Mar 23, 2020 · 1 min read</p>
+	  <div class="toc">
+	  <nav id="TableOfContents">
+<ul>
+<li><a href="#経緯">経緯</a></li>
+<li><a href="#まずはgithub-pagesで自分のページを作る">まずはGitHub Pagesで自分のページを作る</a></li>
+<li><a href="#ローカル環境にhugoを導入">ローカル環境にHugoを導入</a></li>
+<li><a href="#ローカルでテスト記事作り">ローカルでテスト記事作り</a></li>
+<li><a href="#bashスクリプトで楽ちんに更新">bashスクリプトで楽ちんに更新！</a></li>
+<li><a href="#とても参考にさせて頂きました">とても参考にさせて頂きました</a></li>
+</ul>
+</nav> 
+	  </div>
+    </header>
+    <article class="post-content">
+
+<h1 id="経緯">経緯</h1>
+
+<p>ブログを作ろうと考えていたとき、レンタルサーバ/自宅サーバにWordPress入れるのはお金がかかる/管理大変なのがネックだと思ってたのですが、(最初手持ちのラズパイで試してみたらめっちゃ遅かった(汗))
+<strong>Hugo+GitHub Pages</strong>でサーバレスに静的ブログサイトが作れるらしいということで挑戦してみたらサクサクand管理楽ちんで感動した。</p>
+
+<h1 id="まずはgithub-pagesで自分のページを作る">まずはGitHub Pagesで自分のページを作る</h1>
+
+<p><a href="https://qiita.com/MokeeeMokeee/items/4b33691b829aaf119bbf">作り方</a>
+適当にindex.htmlを置いてみて、
+https://[ユーザ名].github.io/
+にアクセスしてみると表示されるはず。</p>
+
+<h1 id="ローカル環境にhugoを導入">ローカル環境にHugoを導入</h1>
+
+<p>私の場合WSL(Ubuntu)にHugoをインストールしたのですが、
+<strong>apt-getするとあとで面倒になります。</strong>
+考えずにapt-getしたらバージョンが低いのが入ってしまっていました。
+利用したいテーマによっては古いバージョンに対応してませんので注意です。
+scssなどを使いたい場合はextendedバージョンを入れます。（私はextendedを入れました。）
+<a href="https://gohugo.io/getting-started/installing">https://gohugo.io/getting-started/installing</a>
+これよく読んでインストールします。
+自分は結局<a href="https://github.com/gohugoio/hugo/releases">HugoのGitHub repo</a>から.debファイルを持ってきてインストールしました。</p>
+
+<h1 id="ローカルでテスト記事作り">ローカルでテスト記事作り</h1>
+
+<p>無事にGitHub Pagesを作ってHugoがインストールできたらローカルでサイトを作っていきます。</p>
+<div class="highlight"><pre class="chroma"><code class="language-console" data-lang="console"><span class="ln">1</span>$ hugo new site myblog 
+<span class="ln">2</span>$ cd myblog/
+<span class="ln">3</span>$ hugo server</code></pre></div>
+<p><a href="http://localhost:1313">http://localhost:1313</a>にブランクページが表示されます。
+確認したら<code>Ctrl+C</code>。</p>
+
+<p>このへんで自分のgithubレポジトリにmyblogというのを新規作成しておきます。
+あとは好みの<a href="https://themes.gohugo.io/">Hugo theme</a>を見つけてきて（私の場合は<a href="https://github.com/laozhu/hugo-nuo">hugo-nuo</a>にしました）<code>myblog/themes/</code>にクローンします。</p>
+<div class="highlight"><pre class="chroma"><code class="language-console" data-lang="console"><span class="ln">1</span>$ cd themes
+<span class="ln">2</span>$ git clone https://github.com/laozhu/hugo-nuo.git
+<span class="ln">3</span>$ ls
+<span class="ln">4</span>hugo-nuo</code></pre></div>
+<p>次はmyblog/config.tomlを編集していきます。
+自分の場合は</p>
+<div class="highlight"><pre class="chroma"><code class="language-console:config.toml" data-lang="console:config.toml"><span class="ln"> 1</span><span class="nx">baseURL</span> <span class="p">=</span> <span class="s2">&#34;http://[ユーザ名].github.io/&#34;</span> 
+<span class="ln"> 2</span><span class="nx">languageCode</span> <span class="p">=</span> <span class="s2">&#34;ja&#34;</span>
+<span class="ln"> 3</span><span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;7.&#34;</span>
+<span class="ln"> 4</span><span class="nx">theme</span> <span class="p">=</span> <span class="s2">&#34;hugo-nuo&#34;</span>
+<span class="ln"> 5</span>
+<span class="ln"> 6</span><span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
+<span class="ln"> 7</span>  <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Home&#34;</span>
+<span class="ln"> 8</span>  <span class="nx">weight</span> <span class="p">=</span> <span class="mi">10</span>
+<span class="ln"> 9</span>  <span class="nx">identifier</span> <span class="p">=</span> <span class="s2">&#34;home&#34;</span>
+<span class="ln">10</span>  <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/&#34;</span>
+<span class="ln">11</span>
+<span class="ln">12</span><span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
+<span class="ln">13</span>  <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;About&#34;</span>
+<span class="ln">14</span>  <span class="nx">weight</span> <span class="p">=</span> <span class="mi">20</span>
+<span class="ln">15</span>  <span class="nx">identifier</span> <span class="p">=</span> <span class="s2">&#34;about&#34;</span>
+<span class="ln">16</span>  <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/about/&#34;</span></code></pre></div>
+<p>ここで自己紹介用の<code>about</code>のページを設定しています。
+weightで表示順が変わります。
+ほかにもいろいろ設定できて、各種テーマのREADME.mdを見ると詳しく載っていたりします。</p>
+
+<p>このへんで試しにテスト記事を作ります。</p>
+<div class="highlight"><pre class="chroma"><code class="language-console" data-lang="console"><span class="ln">1</span>$ cd ../
+<span class="ln">2</span>$ hugo new post/test.md
+<span class="ln">3</span>$ cd content/post/
+<span class="ln">4</span>$ ls
+<span class="ln">5</span>test.md</code></pre></div>
+<p><code>myblog/content/</code>以下に記事が作れます。(hugo newしたところで<code>content/</code>が作成されてしまうので注意)</p>
+<div class="highlight"><pre class="chroma"><code class="language-console:test.md" data-lang="console:test.md"><span class="ln">1</span>---
+<span class="ln">2</span>title: &#34;Test&#34;
+<span class="ln">3</span>author: &#34;Author Name&#34;
+<span class="ln">4</span>cover: &#34;/images/cover.jpg&#34;
+<span class="ln">5</span>tags: [&#34;tagA&#34;, &#34;tagB&#34;]
+<span class="ln">6</span>date: 2019-04-16T18:29:31+09:00
+<span class="ln">7</span>draft: false
+<span class="ln">8</span>---</code></pre></div>
+<p>こんな感じのファイルができるのでその下にMarkdownで書いていきます。（dreft: falseにしないと下書き状態になるようです。）
+自分の場合は自己紹介ページも作りたいので<code>content/about.md</code>なども作っておきました。</p>
+
+<p>次はサーバを起動します。</p>
+<div class="highlight"><pre class="chroma"><span class="ln">1</span>$ hugo server</pre></div>
+<p><a href="http://localhost:1313">http://localhost:1313</a>に設定したテーマが表示されていたらOK。
+ビルドします。</p>
+<div class="highlight"><pre class="chroma"><span class="ln">1</span>$ hugo</pre></div>
+<p>ここで公開用の<code>myblog/public/</code>っていうのができています。
+githubpagesはmaterブランチを参照するので、このディレクトリのファイルだけを<code>[username].github.io</code>レポジトリに入れたい。
+そこで一旦<code>public/</code>を消して(.gitignoreに記述するのもあり)リモートのmyblogレポにpush、そのあと改めてmyblogのサブモジュールにします。</p>
+<div class="highlight"><pre class="chroma"><span class="ln">1</span>$ rm public/ -r
+<span class="ln">2</span>$ git init
+<span class="ln">3</span>$ git remote add origin git@github.com:[ユーザ名]/myblog.git
+<span class="ln">4</span>$ git commit -m &#34;first commit&#34;
+<span class="ln">5</span>$ git push origin master 
+<span class="ln">6</span>$ git submodule add git@github.com:[ユーザ名]/[ユーザ名].github.io.git public</pre></div>
+<p>そして再びビルドして<code>public/</code>に公開用ファイルを吐き出し</p>
+<div class="highlight"><pre class="chroma"><code class="language-console" data-lang="console"><span class="ln">1</span>$ hugo</code></pre></div>
+<h1 id="bashスクリプトで楽ちんに更新">bashスクリプトで楽ちんに更新！</h1>
+
+<p>毎度これらの手順を踏むのは面倒なので
+<a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">公式サイト</a>のPut it Into a Scriptにかいてあるシェルスクリプトを<code>myblog/deploy.sh</code>としましょう。</p>
+<div class="highlight"><pre class="chroma"><code class="language-console" data-lang="console"><span class="ln">1</span>$ ./deploy.sh</code></pre></div>
+<p><code>https://[ユーザ名].github.io/</code>で確認。
+完成！サクサク！これで快適にブログが更新できます。初心者には結構大変でした。</p>
+
+<p>テーマをカスタマイズするときは<code>theme/hugo-nuo/</code>以下の<code>static/</code>や<code>layouts/</code>を<code>myblog/</code>直下にコピペ・編集するだけです。</p>
+
+<p>※これは下書きにずっと放置していた1年前に書いた記事なので、更新すべき点があるかもしれません。（汗）抜けてる所・おかしい所などあったらご指摘お願いいたしますm(__)m</p>
+
+<h1 id="とても参考にさせて頂きました">とても参考にさせて頂きました</h1>
+
+<p><a href="https://qiita.com/h6m3_u/items/5893a61091d258936716">https://qiita.com/h6m3_u/items/5893a61091d258936716</a>
+<a href="https://qiita.com/satzz/items/e24bd703fc04fb45f7ef">https://qiita.com/satzz/items/e24bd703fc04fb45f7ef</a>
+<a href="https://chanmitsu55.github.io/2017/12/25/2017-12-25-create-blog-by-hugo/">https://chanmitsu55.github.io/2017/12/25/2017-12-25-create-blog-by-hugo/</a>
+<a href="https://note.yuuniworks.com/study/hugo.html#data">https://note.yuuniworks.com/study/hugo.html#data</a></p>
+</article>
+	
+
+ 
+    <footer class="post-footer">
+      
+      <ul class="post-tags">
+        
+          <li><a href="/tags/hugo"><span class="tag">Hugo</span></a></li>
+        
+          <li><a href="/tags/githubpages"><span class="tag">Githubpages</span></a></li>
+        
+      </ul>
+      
+      <p class="post-copyright">
+        
+      </p>
+    </footer>
+    
+      
+    
+  </section>
+  
+<footer class="site-footer">
+
+  
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@15.0.0/dist/smooth-scroll.min.js"></script>
+
+
+
+<script async src="https://cdn.jsdelivr.net/npm/video.js@7.3.0/dist/video.min.js"></script>
+
+
+
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+      extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    },
+  });
+</script>
+<script type="text/x-mathjax-config">
+  // Fix <code> tags after MathJax finishes running. This is a
+  // hack to overcome a shortcoming of Markdown. Discussion at
+  // https://github.com/mojombo/jekyll/issues/199
+  MathJax.Hub.Queue(() => {
+    MathJax.Hub.getAllJax().map(v => v.SourceElement().parentNode.className += ' has-jax');
+  });
+</script>
+
+
+
+<script src="/scripts/index.min.js"></script>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('\/service-worker.js').then(function() {
+      console.log('[ServiceWorker] Registered');
+    });
+  }
+</script>
+
+<style>
+  body {
+	font-family: Helvetica,'Osaka','Meiryo',sans-serif;
+  }
+</style>
+
+
+
+
+
+
+
+
+  </body>
+</html>

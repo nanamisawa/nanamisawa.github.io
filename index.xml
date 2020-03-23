@@ -6,7 +6,7 @@
     <description>Recent content on 7.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 15 Mar 2020 18:15:07 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 23 Mar 2020 15:48:24 +0900</lastBuildDate>
     
 	<atom:link href="http://nanamisawa.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -34,6 +34,22 @@ This is nanamisawa 経歴 1993年　愛知県名古屋市　生まれ
   特技  軟体芸（Y字バランス・立ち姿勢からのブリッジなど） 買い物（日頃のネットサーフィンの賜物 効率よく最安値を探し当てます）  資格  PADI オープンウォーター（高校一年時取得）
  池坊 師範（高校三年時取得）
  実用フランス語技能検定 二級（大学三年時取得）</description>
+    </item>
+    
+    <item>
+      <title>WSL UbuntuにHugoを入れてGitHub Pagesで公開するまでの話</title>
+      <link>http://nanamisawa.github.io/post/20200323/</link>
+      <pubDate>Mon, 23 Mar 2020 15:48:24 +0900</pubDate>
+      
+      <guid>http://nanamisawa.github.io/post/20200323/</guid>
+      <description>経緯 ブログを作ろうと考えていたとき、レンタルサーバ/自宅サーバにWordPress入れるのはお金がかかる/管理大変なのがネックだと思ってたのですが、(最初手持ちのラズパイで試してみたらめっちゃ遅かった(汗)) Hugo+GitHub Pagesでサーバレスに静的ブログサイトが作れるらしいということで挑戦してみたらサクサクand管理楽ちんで感動した。
+まずはGitHub Pagesで自分のページを作る 作り方 適当にindex.htmlを置いてみて、 https://[ユーザ名].github.io/ にアクセスしてみると表示されるはず。
+ローカル環境にHugoを導入 私の場合WSL(Ubuntu)にHugoをインストールしたのですが、 apt-getするとあとで面倒になります。 考えずにapt-getしたらバージョンが低いのが入ってしまっていました。 利用したいテーマによっては古いバージョンに対応してませんので注意です。 scssなどを使いたい場合はextendedバージョンを入れます。（私はextendedを入れました。） https://gohugo.io/getting-started/installing これよく読んでインストールします。 自分は結局HugoのGitHub repoから.debファイルを持ってきてインストールしました。
+ローカルでテスト記事作り 無事にGitHub Pagesを作ってHugoがインストールできたらローカルでサイトを作っていきます。
+1$ hugo new site myblog 2$ cd myblog/ 3$ hugo server http://localhost:1313にブランクページが表示されます。 確認したらCtrl+C。
+このへんで自分のgithubレポジトリにmyblogというのを新規作成しておきます。 あとは好みのHugo themeを見つけてきて（私の場合はhugo-nuoにしました）myblog/themes/にクローンします。
+1$ cd themes 2$ git clone https://github.com/laozhu/hugo-nuo.git 3$ ls 4hugo-nuo 次はmyblog/config.tomlを編集していきます。 自分の場合は
+1baseURL = &amp;#34;http://[ユーザ名].github.io/&amp;#34; 2languageCode = &amp;#34;ja&amp;#34; 3title = &amp;#34;7.&amp;#34; 4theme = &amp;#34;hugo-nuo&amp;#34; 5 6[[menu.main]] 7 name = &amp;#34;Home&amp;#34; 8 weight = 10 9 identifier = &amp;#34;home&amp;#34; 10 url = &amp;#34;/&amp;#34; 11 12[[menu.</description>
     </item>
     
     <item>
