@@ -325,19 +325,19 @@ weightで表示順が変わります。
 自分の場合は自己紹介ページも作りたいので<code>content/about.md</code>なども作っておきました。</p>
 
 <p>次はサーバを起動します。</p>
-<div class="highlight"><pre class="chroma"><span class="ln">1</span>$ hugo server</pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-console" data-lang="console"><span class="ln">1</span>$ hugo server</code></pre></div>
 <p><a href="http://localhost:1313">http://localhost:1313</a>に設定したテーマが表示されていたらOK。
 ビルドします。</p>
-<div class="highlight"><pre class="chroma"><span class="ln">1</span>$ hugo</pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-console" data-lang="console"><span class="ln">1</span>$ hugo</code></pre></div>
 <p>ここで公開用の<code>myblog/public/</code>っていうのができています。
 githubpagesはmaterブランチを参照するので、このディレクトリのファイルだけを<code>[username].github.io</code>レポジトリに入れたい。
 そこで一旦<code>public/</code>を消して(.gitignoreに記述するのもあり)リモートのmyblogレポにpush、そのあと改めてmyblogのサブモジュールにします。</p>
-<div class="highlight"><pre class="chroma"><span class="ln">1</span>$ rm public/ -r
+<div class="highlight"><pre class="chroma"><code class="language-console" data-lang="console"><span class="ln">1</span>$ rm public/ -r
 <span class="ln">2</span>$ git init
 <span class="ln">3</span>$ git remote add origin git@github.com:[ユーザ名]/myblog.git
 <span class="ln">4</span>$ git commit -m &#34;first commit&#34;
 <span class="ln">5</span>$ git push origin master 
-<span class="ln">6</span>$ git submodule add git@github.com:[ユーザ名]/[ユーザ名].github.io.git public</pre></div>
+<span class="ln">6</span>$ git submodule add git@github.com:[ユーザ名]/[ユーザ名].github.io.git public</code></pre></div>
 <p>そして再びビルドして<code>public/</code>に公開用ファイルを吐き出し</p>
 <div class="highlight"><pre class="chroma"><code class="language-console" data-lang="console"><span class="ln">1</span>$ hugo</code></pre></div>
 <h1 id="bashスクリプトで楽ちんに更新">bashスクリプトで楽ちんに更新！</h1>
