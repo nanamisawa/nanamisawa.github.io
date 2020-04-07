@@ -6,7 +6,7 @@
     <description>Recent content on 7.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 30 Mar 2020 19:28:18 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 05 Apr 2020 15:20:21 +0900</lastBuildDate>
     
 	<atom:link href="http://nanamisawa.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -37,12 +37,22 @@ This is nanamisawa 経歴 1993年　愛知県名古屋市　生まれ
     </item>
     
     <item>
+      <title>20200405</title>
+      <link>http://nanamisawa.github.io/post/20200405/</link>
+      <pubDate>Sun, 05 Apr 2020 15:20:21 +0900</pubDate>
+      
+      <guid>http://nanamisawa.github.io/post/20200405/</guid>
+      <description>https://ja.wikipedia.org/wiki/%E3%83%8D%E3%83%95%E3%82%A7%E3%83%AB%E3%83%86%E3%82%A3%E3%83%86%E3%82%A3
+https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%BC%E3%83%8D%E3%82%B9%E3%83%88%E3%83%BB%E3%83%98%E3%83%9F%E3%83%B3%E3%82%B0%E3%82%A6%E3%82%A7%E3%82%A4</description>
+    </item>
+    
+    <item>
       <title>20200330</title>
       <link>http://nanamisawa.github.io/post/20200330/</link>
       <pubDate>Mon, 30 Mar 2020 19:28:18 +0900</pubDate>
       
       <guid>http://nanamisawa.github.io/post/20200330/</guid>
-      <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
+      <description>https://ja.wikipedia.org/wiki/%E3%83%8F%E3%83%B3%E3%83%A0%E3%83%A9%E3%83%93%E6%B3%95%E5%85%B8</description>
     </item>
     
     <item>
@@ -153,13 +163,7 @@ http://www.nul.nagoya-u.ac.jp.ejgw.nul.nagoya-u.ac.jp/db/DBannai/ezproxy/index.h
       <pubDate>Mon, 15 Apr 2019 00:44:03 +0900</pubDate>
       
       <guid>http://nanamisawa.github.io/post/20190415/</guid>
-      <description>※Qiitaと同じ内容です
-前提  NFSで同様にファイルサーバがマウントされている計算機間でのsshログイン sshログイン後も元いたディレクトリのままになるようなコマンドを.bashrcで設定したい（通常はsshすると下のようにhomeディレクトリに移動する　いちいち元の場所にcdするのは面倒）
-  1[misawa@host1 test]$ ssh host2 2[misawa@host2 ~]$ 失敗例 1function sshcd(){ 2	current=`pwd` 3	ssh $1 &amp;#34;cd $current&amp;#34; 4} これだとcdを実行したあと閉じるので元に戻ってしまう（ターミナルの見た目上は変化がない）
-1[misawa@host1 test]$ sshcd host2 2[misawa@host1 test]$ 成功例 1function sshcd(){ 2	current=`pwd` 3	ssh -t $1 &amp;#34;cd $current&amp;amp;&amp;amp; /bin/bash&amp;#34; 4} こうすることでうまくいきました。
-1[misawa@host1 test]$ sshcd host2 2[misawa@host2 test]$ 作業時間がほんのちょっと短縮できます。
-※とても参考にさせて頂きました
-https://qiita.com/kanemu/items/679c4e14aee15441e33f</description>
+      <description>&lt;p&gt;sshログインしても元の作業ディレクトリのままにする方法&lt;/p&gt;</description>
     </item>
     
     <item>

@@ -24,39 +24,24 @@
 
   
   
-  <meta name="description" content="※Qiitaと同じ内容です
-前提  NFSで同様にファイルサーバがマウントされている計算機間でのsshログイン sshログイン後も元いたディレクトリのままになるようなコマンドを.bashrcで設定したい（通常はsshすると下のようにhomeディレクトリに移動する　いちいち元の場所にcdするのは面倒）
-  1[misawa@host1 test]$ ssh host2 2[misawa@host2 ~]$ 失敗例 1function sshcd(){ 2	current=`pwd` 3	ssh $1 &amp;#34;cd $current&amp;#34; 4} これだとcdを実行したあと閉じるので元に戻ってしまう（ターミナルの見た目上は変化がない）
-1[misawa@host1 test]$ sshcd host2 2[misawa@host1 test]$ 成功例 1function sshcd(){ 2	current=`pwd` 3	ssh -t $1 &amp;#34;cd $current&amp;amp;&amp;amp; /bin/bash&amp;#34; 4} こうすることでうまくいきました。
-1[misawa@host1 test]$ sshcd host2 2[misawa@host2 test]$ 作業時間がほんのちょっと短縮できます。
-※とても参考にさせて頂きました
-https://qiita.com/kanemu/items/679c4e14aee15441e33f">
+  <meta name="description" content="sshログインしても元の作業ディレクトリのままにする方法
+">
 
   
   
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@mswn7">
     <meta name="twitter:title" content="カレントディレクトリのままsshしたいときのための.bashrc設定">
-    <meta name="twitter:description" content="※Qiitaと同じ内容です
-前提  NFSで同様にファイルサーバがマウントされている計算機間でのsshログイン sshログイン後も元いたディレクトリのままになるようなコマンドを.bashrcで設定したい（通常はsshすると下のようにhomeディレクトリに移動する　いちいち元の場所にcdするのは面倒）
-  1[misawa@host1 test]$ ssh host2 2[misawa@host2 ~]$ 失敗例 1function sshcd(){ 2	current=`pwd` 3	ssh $1 &amp;#34;cd $current&amp;#34; 4} これだとcdを実行したあと閉じるので元に戻ってしまう（ターミナルの見た目上は変化がない）
-1[misawa@host1 test]$ sshcd host2 2[misawa@host1 test]$ 成功例 1function sshcd(){ 2	current=`pwd` 3	ssh -t $1 &amp;#34;cd $current&amp;amp;&amp;amp; /bin/bash&amp;#34; 4} こうすることでうまくいきました。
-1[misawa@host1 test]$ sshcd host2 2[misawa@host2 test]$ 作業時間がほんのちょっと短縮できます。
-※とても参考にさせて頂きました
-https://qiita.com/kanemu/items/679c4e14aee15441e33f">
+    <meta name="twitter:description" content="sshログインしても元の作業ディレクトリのままにする方法
+">
     <meta name="twitter:image" content="/images/nana_android.png">
   
 
   
   <meta property="og:type" content="article">
   <meta property="og:title" content="カレントディレクトリのままsshしたいときのための.bashrc設定">
-  <meta property="og:description" content="※Qiitaと同じ内容です
-前提  NFSで同様にファイルサーバがマウントされている計算機間でのsshログイン sshログイン後も元いたディレクトリのままになるようなコマンドを.bashrcで設定したい（通常はsshすると下のようにhomeディレクトリに移動する　いちいち元の場所にcdするのは面倒）
-  1[misawa@host1 test]$ ssh host2 2[misawa@host2 ~]$ 失敗例 1function sshcd(){ 2	current=`pwd` 3	ssh $1 &amp;#34;cd $current&amp;#34; 4} これだとcdを実行したあと閉じるので元に戻ってしまう（ターミナルの見た目上は変化がない）
-1[misawa@host1 test]$ sshcd host2 2[misawa@host1 test]$ 成功例 1function sshcd(){ 2	current=`pwd` 3	ssh -t $1 &amp;#34;cd $current&amp;amp;&amp;amp; /bin/bash&amp;#34; 4} こうすることでうまくいきました。
-1[misawa@host1 test]$ sshcd host2 2[misawa@host2 test]$ 作業時間がほんのちょっと短縮できます。
-※とても参考にさせて頂きました
-https://qiita.com/kanemu/items/679c4e14aee15441e33f">
+  <meta property="og:description" content="sshログインしても元の作業ディレクトリのままにする方法
+">
   <meta property="og:url" content="http://nanamisawa.github.io/post/20190415/">
   <meta property="og:image" content="/images/nana_android.png">
 
@@ -238,7 +223,7 @@ https://qiita.com/kanemu/items/679c4e14aee15441e33f">
 </nav> 
 	  </div>
     </header>
-    <article class="post-content">
+    <article class="post-content"><p>sshログインしても元の作業ディレクトリのままにする方法</p>
 
 <p>※Qiitaと同じ内容です</p>
 
@@ -269,8 +254,7 @@ https://qiita.com/kanemu/items/679c4e14aee15441e33f">
 <p>作業時間がほんのちょっと短縮できます。</p>
 
 <p>※とても参考にさせて頂きました<br />
-<a href="https://qiita.com/kanemu/items/679c4e14aee15441e33f">https://qiita.com/kanemu/items/679c4e14aee15441e33f</a></p>
-</article>
+<a href="https://qiita.com/kanemu/items/679c4e14aee15441e33f">https://qiita.com/kanemu/items/679c4e14aee15441e33f</a></p></article>
 	
 
 <div class="related">
@@ -294,7 +278,7 @@ https://qiita.com/kanemu/items/679c4e14aee15441e33f">
       </ul>
       
       <p class="post-copyright">
-        This post was published <strong>350</strong> days ago, content in the post may be inaccurate, even wrong now, please take risk yourself.
+        This post was published <strong>358</strong> days ago, content in the post may be inaccurate, even wrong now, please take risk yourself.
       </p>
     </footer>
     
