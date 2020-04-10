@@ -24,42 +24,24 @@
 
   
   <meta name="author" content="Author Name">
-  <meta name="description" content="経緯 ブログを作ろうと考えていたとき、レンタルサーバ/自宅サーバにWordPress入れるのはお金がかかる/管理大変なのがネックだと思ってたのですが、(最初手持ちのラズパイで試してみたらめっちゃ遅かった(汗)) Hugo&#43;GitHub Pagesでサーバレスに静的ブログサイトが作れるらしいということで挑戦してみたらサクサクand管理楽ちんで感動した。
-まずはGitHub Pagesで自分のページを作る 作り方 適当にindex.htmlを置いてみて、 https://[ユーザ名].github.io/ にアクセスしてみると表示されるはず。
-ローカル環境にHugoを導入 私の場合WSL(Ubuntu)にHugoをインストールしたのですが、 apt-getするとあとで面倒になります。 考えずにapt-getしたらバージョンが低いのが入ってしまっていました。 利用したいテーマによっては古いバージョンに対応してませんので注意です。 scssなどを使いたい場合はextendedバージョンを入れます。（私はextendedを入れました。） https://gohugo.io/getting-started/installing これよく読んでインストールします。 自分は結局HugoのGitHub repoから.debファイルを持ってきてインストールしました。
-ローカルでテスト記事作り 無事にGitHub Pagesを作ってHugoがインストールできたらローカルでサイトを作っていきます。
-1$ hugo new site myblog 2$ cd myblog/ 3$ hugo server http://localhost:1313にブランクページが表示されます。 確認したらCtrl&#43;C。
-このへんで自分のgithubレポジトリにmyblogというのを新規作成しておきます。 あとは好みのHugo themeを見つけてきて（私の場合はhugo-nuoにしました）myblog/themes/にクローンします。
-1$ cd themes 2$ git clone https://github.com/laozhu/hugo-nuo.git 3$ ls 4hugo-nuo 次はmyblog/config.tomlを編集していきます。 自分の場合は
-1baseURL = &amp;#34;http://[ユーザ名].github.io/&amp;#34; 2languageCode = &amp;#34;ja&amp;#34; 3title = &amp;#34;7.&amp;#34; 4theme = &amp;#34;hugo-nuo&amp;#34; 5 6[[menu.main]] 7 name = &amp;#34;Home&amp;#34; 8 weight = 10 9 identifier = &amp;#34;home&amp;#34; 10 url = &amp;#34;/&amp;#34; 11 12[[menu.">
+  <meta name="description" content="Hugo&#43;GitHub Pagesで楽ちんブログ作り
+">
 
   
   
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@mswn7">
     <meta name="twitter:title" content="WSL UbuntuにHugoを入れてGitHub Pagesで公開するまでの話">
-    <meta name="twitter:description" content="経緯 ブログを作ろうと考えていたとき、レンタルサーバ/自宅サーバにWordPress入れるのはお金がかかる/管理大変なのがネックだと思ってたのですが、(最初手持ちのラズパイで試してみたらめっちゃ遅かった(汗)) Hugo&#43;GitHub Pagesでサーバレスに静的ブログサイトが作れるらしいということで挑戦してみたらサクサクand管理楽ちんで感動した。
-まずはGitHub Pagesで自分のページを作る 作り方 適当にindex.htmlを置いてみて、 https://[ユーザ名].github.io/ にアクセスしてみると表示されるはず。
-ローカル環境にHugoを導入 私の場合WSL(Ubuntu)にHugoをインストールしたのですが、 apt-getするとあとで面倒になります。 考えずにapt-getしたらバージョンが低いのが入ってしまっていました。 利用したいテーマによっては古いバージョンに対応してませんので注意です。 scssなどを使いたい場合はextendedバージョンを入れます。（私はextendedを入れました。） https://gohugo.io/getting-started/installing これよく読んでインストールします。 自分は結局HugoのGitHub repoから.debファイルを持ってきてインストールしました。
-ローカルでテスト記事作り 無事にGitHub Pagesを作ってHugoがインストールできたらローカルでサイトを作っていきます。
-1$ hugo new site myblog 2$ cd myblog/ 3$ hugo server http://localhost:1313にブランクページが表示されます。 確認したらCtrl&#43;C。
-このへんで自分のgithubレポジトリにmyblogというのを新規作成しておきます。 あとは好みのHugo themeを見つけてきて（私の場合はhugo-nuoにしました）myblog/themes/にクローンします。
-1$ cd themes 2$ git clone https://github.com/laozhu/hugo-nuo.git 3$ ls 4hugo-nuo 次はmyblog/config.tomlを編集していきます。 自分の場合は
-1baseURL = &amp;#34;http://[ユーザ名].github.io/&amp;#34; 2languageCode = &amp;#34;ja&amp;#34; 3title = &amp;#34;7.&amp;#34; 4theme = &amp;#34;hugo-nuo&amp;#34; 5 6[[menu.main]] 7 name = &amp;#34;Home&amp;#34; 8 weight = 10 9 identifier = &amp;#34;home&amp;#34; 10 url = &amp;#34;/&amp;#34; 11 12[[menu.">
+    <meta name="twitter:description" content="Hugo&#43;GitHub Pagesで楽ちんブログ作り
+">
     <meta name="twitter:image" content="/images/nana_android.png">
   
 
   
   <meta property="og:type" content="article">
   <meta property="og:title" content="WSL UbuntuにHugoを入れてGitHub Pagesで公開するまでの話">
-  <meta property="og:description" content="経緯 ブログを作ろうと考えていたとき、レンタルサーバ/自宅サーバにWordPress入れるのはお金がかかる/管理大変なのがネックだと思ってたのですが、(最初手持ちのラズパイで試してみたらめっちゃ遅かった(汗)) Hugo&#43;GitHub Pagesでサーバレスに静的ブログサイトが作れるらしいということで挑戦してみたらサクサクand管理楽ちんで感動した。
-まずはGitHub Pagesで自分のページを作る 作り方 適当にindex.htmlを置いてみて、 https://[ユーザ名].github.io/ にアクセスしてみると表示されるはず。
-ローカル環境にHugoを導入 私の場合WSL(Ubuntu)にHugoをインストールしたのですが、 apt-getするとあとで面倒になります。 考えずにapt-getしたらバージョンが低いのが入ってしまっていました。 利用したいテーマによっては古いバージョンに対応してませんので注意です。 scssなどを使いたい場合はextendedバージョンを入れます。（私はextendedを入れました。） https://gohugo.io/getting-started/installing これよく読んでインストールします。 自分は結局HugoのGitHub repoから.debファイルを持ってきてインストールしました。
-ローカルでテスト記事作り 無事にGitHub Pagesを作ってHugoがインストールできたらローカルでサイトを作っていきます。
-1$ hugo new site myblog 2$ cd myblog/ 3$ hugo server http://localhost:1313にブランクページが表示されます。 確認したらCtrl&#43;C。
-このへんで自分のgithubレポジトリにmyblogというのを新規作成しておきます。 あとは好みのHugo themeを見つけてきて（私の場合はhugo-nuoにしました）myblog/themes/にクローンします。
-1$ cd themes 2$ git clone https://github.com/laozhu/hugo-nuo.git 3$ ls 4hugo-nuo 次はmyblog/config.tomlを編集していきます。 自分の場合は
-1baseURL = &amp;#34;http://[ユーザ名].github.io/&amp;#34; 2languageCode = &amp;#34;ja&amp;#34; 3title = &amp;#34;7.&amp;#34; 4theme = &amp;#34;hugo-nuo&amp;#34; 5 6[[menu.main]] 7 name = &amp;#34;Home&amp;#34; 8 weight = 10 9 identifier = &amp;#34;home&amp;#34; 10 url = &amp;#34;/&amp;#34; 11 12[[menu.">
+  <meta property="og:description" content="Hugo&#43;GitHub Pagesで楽ちんブログ作り
+">
   <meta property="og:url" content="http://nanamisawa.github.io/post/20200323/">
   <meta property="og:image" content="/images/nana_android.png">
 
@@ -244,7 +226,7 @@
 </nav> 
 	  </div>
     </header>
-    <article class="post-content">
+    <article class="post-content"><p>Hugo+GitHub Pagesで楽ちんブログ作り</p>
 
 <h1 id="経緯">経緯</h1>
 
@@ -357,8 +339,7 @@ githubpagesはmaterブランチを参照するので、このディレクトリ�
 <p><a href="https://qiita.com/h6m3_u/items/5893a61091d258936716">https://qiita.com/h6m3_u/items/5893a61091d258936716</a>
 <a href="https://qiita.com/satzz/items/e24bd703fc04fb45f7ef">https://qiita.com/satzz/items/e24bd703fc04fb45f7ef</a>
 <a href="https://chanmitsu55.github.io/2017/12/25/2017-12-25-create-blog-by-hugo/">https://chanmitsu55.github.io/2017/12/25/2017-12-25-create-blog-by-hugo/</a>
-<a href="https://note.yuuniworks.com/study/hugo.html#data">https://note.yuuniworks.com/study/hugo.html#data</a></p>
-</article>
+<a href="https://note.yuuniworks.com/study/hugo.html#data">https://note.yuuniworks.com/study/hugo.html#data</a></p></article>
 	
 
  
