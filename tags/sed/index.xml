@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>tips on 7.</title>
-    <link>http://nanamisawa.github.io/tags/tips/</link>
-    <description>Recent content in tips on 7.</description>
+    <title>sed on 7.</title>
+    <link>http://nanamisawa.github.io/tags/sed/</link>
+    <description>Recent content in sed on 7.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Fri, 10 Apr 2020 15:46:43 +0900</lastBuildDate>
     
-	<atom:link href="http://nanamisawa.github.io/tags/tips/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://nanamisawa.github.io/tags/sed/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,16 +18,6 @@
       
       <guid>http://nanamisawa.github.io/post/20200410/</guid>
       <description>&lt;p&gt;zオプションを使います。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Windowsのエクスプローラーでのご移動を防ぐ</title>
-      <link>http://nanamisawa.github.io/post/20190619/</link>
-      <pubDate>Wed, 19 Jun 2019 15:19:52 +0900</pubDate>
-      
-      <guid>http://nanamisawa.github.io/post/20190619/</guid>
-      <description>https://gigazine.net/news/20150102-alterdnd-review/
-手抜きですがメモ^^;</description>
     </item>
     
   </channel>

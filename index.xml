@@ -6,7 +6,7 @@
     <description>Recent content on 7.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 05 Apr 2020 15:20:21 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 10 Apr 2020 15:46:43 +0900</lastBuildDate>
     
 	<atom:link href="http://nanamisawa.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -34,6 +34,15 @@ This is nanamisawa 経歴 1993年　愛知県名古屋市　生まれ
   特技  軟体芸（Y字バランス・立ち姿勢からのブリッジなど） 買い物（日頃のネットサーフィンの賜物 効率よく最安値を探し当てます）  資格  PADI オープンウォーター（高校一年時取得）
  池坊 師範（高校三年時取得）
  実用フランス語技能検定 二級（大学三年時取得）</description>
+    </item>
+    
+    <item>
+      <title>sedで何番目かに登場する文字を置換する</title>
+      <link>http://nanamisawa.github.io/post/20200410/</link>
+      <pubDate>Fri, 10 Apr 2020 15:46:43 +0900</pubDate>
+      
+      <guid>http://nanamisawa.github.io/post/20200410/</guid>
+      <description>&lt;p&gt;zオプションを使います。&lt;/p&gt;</description>
     </item>
     
     <item>
