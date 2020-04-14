@@ -3,18 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://nanamisawa.github.io/_about/</loc>
+    <lastmod>2014-04-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://nanamisawa.github.io/about/</loc>
     <lastmod>2014-04-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://nanamisawa.github.io/</loc>
-    <lastmod>2020-04-10T15:46:43+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://nanamisawa.github.io/tags/linux/</loc>
     <lastmod>2020-04-10T15:46:43+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -27,6 +26,12 @@
   
   <url>
     <loc>http://nanamisawa.github.io/tags/</loc>
+    <lastmod>2020-04-10T15:46:43+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://nanamisawa.github.io/tags/linux/</loc>
     <lastmod>2020-04-10T15:46:43+09:00</lastmod>
     <priority>0</priority>
   </url>
